@@ -1,0 +1,43 @@
+# Site settings
+title: 'DH Methods: Historical Inquiries with R (2020S)'
+description: '070184 UE Methodenkurs - DH Methods: Historical Inquiries with R (2020S) — University of Vienna, Department of History; Instructor Dr. Maxim G. Romanov'
+url: 'https://univie-histR-2020s.github.io/'
+baseurl: ''
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Maxim Romanov'
+  email: maxim.romanov@univie.ac.at
+  twitter_username: maximromanov
+  facebook_username: 
+  github_username:  maximromanov
+  linkedin_username:  
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
