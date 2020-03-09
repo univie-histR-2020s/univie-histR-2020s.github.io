@@ -4,30 +4,30 @@ categories: [lessons]
 tags: [tag, tag, tag, tag, tag]
 ---
 
-## Goals:
+# Goals:
 
 ...
 
-## Software:
+# Software:
 
 * ...
 * ...
 
-## Class:
-
-* ...
-* ...
-* ...
-
-
-## Reference materials:
+# Class:
 
 * ...
 * ...
 * ...
 
 
-## Homework:
+# Reference materials:
+
+* ...
+* ...
+* ...
+
+
+# Homework:
 
 * Task 1
 * Task 2

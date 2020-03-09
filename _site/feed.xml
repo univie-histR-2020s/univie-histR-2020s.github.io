@@ -5,28 +5,13 @@
     <description>070184 UE Methodenkurs - DH Methods: Historical Inquiries with R (2020S)&lt;br&gt;Instructor Dr. Maxim G. Romanov&lt;br&gt;Department of History&lt;br&gt;—University of Vienna—</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 08 Mar 2020 21:37:05 +0100</pubDate>
-    <lastBuildDate>Sun, 08 Mar 2020 21:37:05 +0100</lastBuildDate>
+    <pubDate>Mon, 09 Mar 2020 07:50:34 +0100</pubDate>
+    <lastBuildDate>Mon, 09 Mar 2020 07:50:34 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>Welcome to the Course Website!</title>
-        <description>&lt;p&gt;This is a companion website for the course “070184 UE Methodenkurs - DH Methods: Historical Inquiries with R (2020S)”, offered at the University of Vienna (Department of History) and taught by Dr. Maxim G. Romanov. For the course syllabus, check the Syllabus link on the left panel. Lesson materials will be appearing on the website shortly before each class.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 08 Mar 2020 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/2020/welcome/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/welcome/</guid>
-        
-        <category>intro</category>
-        
-        
-        <category>intro</category>
-        
-      </item>
-    
-      <item>
         <title>L01 General Introduction: Making Sure Everything Works</title>
-        <description>&lt;h2 id=&quot;goals&quot;&gt;Goals:&lt;/h2&gt;
+        <description>&lt;h1 id=&quot;goals&quot;&gt;Goals:&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Install R and R Studio and start working with them
@@ -36,22 +21,16 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Get to know R Notebooks (R markdown)&lt;/li&gt;
-  &lt;li&gt;Start learning R with the &lt;code class=&quot;highlighter-rouge&quot;&gt;swirl&lt;/code&gt; package
-    &lt;ul&gt;
-      &lt;li&gt;Beginner: &lt;em&gt;R Programming: The basics of programming in R&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;Intermediate: &lt;em&gt;Getting and Cleaning Data&lt;/em&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;software&quot;&gt;Software:&lt;/h2&gt;
+&lt;h1 id=&quot;software&quot;&gt;Software:&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;R &lt;a href=&quot;https://www.r-project.org/&quot;&gt;https://www.r-project.org/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;R Studio &lt;a href=&quot;https://www.rstudio.com/&quot;&gt;https://www.rstudio.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;class-part-i&quot;&gt;Class, Part I&lt;/h2&gt;
+&lt;h1 id=&quot;class&quot;&gt;Class:&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;R Studio Interface&lt;/li&gt;
@@ -60,20 +39,25 @@
   &lt;li&gt;Converting R Notebook into different formats&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;installing-rmarkdown&quot;&gt;Installing &lt;code class=&quot;highlighter-rouge&quot;&gt;rmarkdown&lt;/code&gt;&lt;/h3&gt;
+&lt;h2 id=&quot;installing-rmarkdown&quot;&gt;Installing &lt;code class=&quot;highlighter-rouge&quot;&gt;rmarkdown&lt;/code&gt;&lt;/h2&gt;
 
 &lt;p&gt;Instructions here: &lt;a href=&quot;https://bookdown.org/yihui/rmarkdown/installation.html&quot;&gt;https://bookdown.org/yihui/rmarkdown/installation.html&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;yaml-header&quot;&gt;YAML header&lt;/h3&gt;
+&lt;!--
+### YAML header
 
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;R Notebook Test&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;html_document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df_print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;paged&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+``` r
+---
+title: &quot;R Notebook Test&quot;
+output:
+  html_document:
+    df_print: paged
+    toc: true
+---
+```
+--&gt;
+
+&lt;h2 id=&quot;starting-with-our-first-workbook&quot;&gt;Starting with our first workbook:&lt;/h2&gt;
 
 &lt;p&gt;Now, download a workbook file (&lt;a href=&quot;../../files/01_worksheets_familiar-with-r.Rmd.zip&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;01_worksheets_familiar-with-r.Rmd.zip&lt;/code&gt;&lt;/a&gt;). Unzip it and open in &lt;code class=&quot;highlighter-rouge&quot;&gt;RStudio&lt;/code&gt;. Let’s work through it!&lt;/p&gt;
 
@@ -84,7 +68,7 @@
   &lt;li&gt;&lt;a href=&quot;https://bookdown.org/yihui/rmarkdown/&quot;&gt;https://bookdown.org/yihui/rmarkdown/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;reference-materials&quot;&gt;Reference materials:&lt;/h2&gt;
+&lt;h1 id=&quot;reference-materials&quot;&gt;Reference materials:&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;em&gt;R Primer&lt;/em&gt; (&lt;a href=&quot;https://dh-r.lincolnmullen.com/primer.html&quot;&gt;https://dh-r.lincolnmullen.com/primer.html&lt;/a&gt;) in: Lincoln A. Mullen, &lt;em&gt;Computational Historical Thinking: With Applications in R (2018–):&lt;/em&gt; &lt;a href=&quot;https://dh-r.lincolnmullen.com&quot;&gt;https://dh-r.lincolnmullen.com&lt;/a&gt;.
@@ -95,7 +79,7 @@
   &lt;li&gt;Your &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; installation may ‘speak’ your main language. It is nice on one hand, but can be quite inconvenient in class, where the main language is English. You may have to do cast some spells to switch &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; into English. Possible solutions can be found here: &lt;a href=&quot;https://stackoverflow.com/questions/13575180/how-to-change-language-settings-in-r/&quot;&gt;https://stackoverflow.com/questions/13575180/how-to-change-language-settings-in-r/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;homework&quot;&gt;Homework:&lt;/h2&gt;
+&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Complete the worksheet &lt;em&gt;Getting familiar with R&lt;/em&gt;.&lt;/li&gt;
@@ -126,6 +110,21 @@
         
         
         <category>lessons</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to the Course Website!</title>
+        <description>&lt;p&gt;This is a companion website for the course “070184 UE Methodenkurs - DH Methods: Historical Inquiries with R (2020S)”, offered at the University of Vienna (Department of History) and taught by Dr. Maxim G. Romanov. For the course syllabus, check the Syllabus link on the left panel. Lesson materials will be appearing on the website shortly before each class.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 07 Mar 2020 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/2020/welcome/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/welcome/</guid>
+        
+        <category>intro</category>
+        
+        
+        <category>intro</category>
         
       </item>
     
