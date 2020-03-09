@@ -36,10 +36,12 @@ Each class session will consist in large part of practical hands-on exercises le
 
 Just as in research and real life, collaboration is a very good way to learn and is therefore encouraged. If you need help with any assignment, you are welcome to ask a fellow student. If you do work together on homework assignments, then when you submit it please include a brief note (just a sentence or two) to indicate who did what.
 
+For most classes you will need to complete and submite worksheets. Some questions in those worksheets will be easy, but some you might find to be difficult and even impossible. We will go over the difficult parts of each worksheet in class, so do not worry. The main goal is to practice, since for most students this course will be very new and verry strange. In practical terms this means that you need to to submit your worksheet in time with your best try for each question. The worksheets will be graded by completion, i.e. you will get full credit if you: 1) complete all the easy and moderately difficult questions; 2) give an honest try to the very difficult questions; 3) ask for help in class and/or office hours to make sure that you understand the challenges.
+
 ## Submitting Homework:
 
-* Homework assignments are to be submitted by the beginning of the next class;
-* Email your homework to the instructor as attachments.
+* Homework assignments are due before the beginning of the following class;
+* You will need to complete your worksheet and generate HTML or PDF document with the results, which you then submit to the instructor as attachments via email.
 	*  In the subject of your email, please, add the following: `070184-LXX-HW-YourLastName-YourMatriculationNumber`, where `LXX` is the numnber of the lesson for which you submit homework; `YourLastName` is your last name; and `YourMatriculationNumber` is your matriculation number.
 
 # Final Project:
