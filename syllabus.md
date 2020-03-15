@@ -19,7 +19,6 @@ robots: noindex
 * Meeting place: Hörsaal 30 Hauptgebäude, 1.Stock, Stiege 7
 * **NB:** Deregistration possible until Tu 31.03.2020 23:59
 
-
 # Aims, contents and method of the course:
 
 The course will offer a practical introduction into R programming language, which is currently one of the most popular choices of humanists interested in investigating humanities problems with computational methods. The focus of the course is text analysis. The course will have three main parts: first, you will be introduced to the basics of R; second, you will learn about main text analysis methods; third, you will work on your own text analysis project. The language of the course is English.
@@ -48,12 +47,24 @@ For most classes you will need to complete and submite worksheets. Some question
 
 The final project is your own research project that uses collections of texts of your interest and research methods introduced inthe course. You are encouraged to explore methods outside of those covered within the course. Ideally, your research project should be directly related to your main research project that you undertake in your studies. You are welcome to work in groups on your final projects, but make sure to discuss that with the instructor first.
 
+# Practice worksheets (R Notebooks)
+
+* [`01_worksheets_familiar-with-r.Rmd.zip`](../../files/01_worksheets_familiar-with-r.Rmd.zip)
+* [`02_worksheets_data-structures.Rmd.zip`](../../files/02_worksheets_data-structures.Rmd.zip)
+* [`03_worksheets_data-manipulation-introduction.Rmd.zip`](../../files/03_worksheets_data-manipulation-introduction.Rmd.zip)
+* [`04_worksheets_data-manipulation-continued.Rmd.zip`](../../files/04_worksheets_data-manipulation-continued.Rmd.zip)
+* [`05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip`](../../files/05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip)
+* [`06_worksheets_functions.Rmd.zip`](../../files/06_worksheets_functions.Rmd.zip)
+
+**NB:** Worksheets 1-6 have beed developed by Lincoln Mullen. Source: Lincoln A. Mullen, *Computational Historical Thinking: With Applications in R (2018–)*: <http://dh-r.lincolnmullen.com>.
+
 # Study materials:
 
 * Jockers, Matthew L. *Text Analysis with R for Students of Literature.* New York: Springer, 2014 (*Moodle*)
 * Arnold, Taylor, and Lauren Tilton. *Humanities Data in R.* New York, NY: Springer Science+Business Media, 2015 (*Moodle*)
 * Healy, Kieran *Data Visualization: A Practical Guide*. Princeton University Press, 2018. ISBN: 978-0691181622. <http://socviz.co/>
 * Hadley Wickham & Garrett Grolemund, *R for Data Science: Import, Tidy, Transform, Visualize, and Model Data.* O’Reilly, 2017. ISBN: 978-1491910399. <https://r4ds.had.co.nz/>
+* Wickham, Hadley. *Advanced R, Second Edition.* 2 edition. Boca Raton: Chapman and Hall/CRC, 2019. <http://adv-r.had.co.nz/>
 * Also check <https://bookdown.org/> for more books on R
 
 # Software, Tools, & Technologies:
@@ -101,22 +112,22 @@ The up-to-date schedule is available on `u:find`: <https://ufind.univie.ac.at/en
 
 # Lesson Topics:
 
-- **[ #01 ]**	Introduction to `R` and `RStudio`
-- **[ #02 ]**	Data Manipulations I
-- **[ #03 ]**	Data Manipulations II
-- **[ #04 ]**	Data Manipulations III
-- **[ ## ]**   2-WEEK BREAK: `swirl` tutorials
-- **[ ## ]**   2-WEEK BREAK: `swirl` tutorials
-- **[ #05 ]**	Data Visualizations
-- **[ #06 ]**	Text Analysis Methods I: Words, Ngrams, KWIC, etc.
-- **[ #07 ]**	Text Analysis Methods II: TF-IDF and other Similarity Measures
-- **[ #08 ]**	Text Analysis Methods III: Topic Modeling
-- **[ #09 ]**	Text Analysis Methods IV: Stylometric Analysis
-- **[ #10 ]**	Projects I
-- **[ ## ]**   1-WEEK BREAK: *working on your projects*
-- **[ #11 ]**	Projects II
-- **[ #12 ]**	Projects III
-- **[ #13 ]**	Projects IV
+- **[ #01 ]**	General Introduction: Making Sure Everything Works; Getting to know `R`
+- **[ #02 ]**	Basics I: Data Structures and Subsetting 
+- **[ #03 ]**	Basics II: Data Manipulation & Exloratory Analysis
+- **[ #04 ]**	Basics III: Data Visualization; Functions
+- **[ ## ]**	2-WEEK BREAK: `swirl` tutorials @ home
+- **[ ## ]**	2-WEEK BREAK: `swirl` tutorials @ home
+- **[ #05 ]**	Data I: Collecting, Organizing, Creating
+- **[ #06 ]**	Data II: Modeling & Manipulating
+- **[ #07 ]**	Text Analysis Methods I: Words, Ngrams, KWIC, etc.
+- **[ #08 ]**	Text Analysis Methods II: TF-IDF and other Similarity Measures
+- **[ #09 ]**	Text Analysis Methods III: Topic Modeling
+- **[ #10 ]**	Text Analysis Methods IV: Stylometric Analysis
+- **[ ## ]**	1-WEEK BREAK: *start working on your projects*
+- **[ #11 ]**	Projects I
+- **[ #12 ]**	Projects II
+- **[ #13 ]**	Projects III
 - **[ #14 ]**	Final Presentations
 
 **NB:** in the event one of the classes might be canceled, this will be announced separately. Lesson materials will be appearing on the website shortly before each class. Lessons will be accessible via the *Lessons* link on the left panel. 
