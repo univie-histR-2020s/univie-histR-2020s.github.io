@@ -54,7 +54,7 @@
   <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
   
-  <link rel="stylesheet" href="/css/main.css?1584015582269195000">
+  <link rel="stylesheet" href="/css/main.css?1584380177403685000">
   <link rel="canonical" href="http://localhost:4000/2020/L01/">
   <link rel="alternate" type="application/rss+xml" title="DH Methods: Historical Inquiries with R (2020S)" href="/feed.xml">
 </head>
@@ -257,6 +257,42 @@ output:
   <li>Submit your homework as described below.</li>
 </ul>
 
+<h1 id="common-issues-with-homework">Common issues with homework:</h1>
+
+<h2 id="tracing-errors">Tracing errors</h2>
+
+<p>Errors happen all the time. You will run into errors when you run your code. You will run into error messages when “knitting” your document — as a result, your document will not be generated. To resolve this:</p>
+
+<ol>
+  <li>It is important to run each chunk of code separately to ensure that they all work. If any of the chunks throw errors, you will not be able to “knit” your documents.</li>
+  <li>When you run into an error, <code class="highlighter-rouge">R Markdown</code> panel (usually in the lower left corner of RStudio interface) will tell you in which line the error occurred. You will need to fix it the same way you would in Step 1.</li>
+</ol>
+
+<h2 id="comments--commenting-out">Comments / Commenting out</h2>
+
+<p>You do not want to constantly keep [re]installing libraries. So, if a library is already installed, you can “comment out” that line.</p>
+
+<pre><code class="language-{r}">install.packages("historydata")
+install.packages("dplyr")
+</code></pre>
+
+<p>For example, the code chunk above should become:</p>
+
+<pre><code class="language-{r}">#install.packages("historydata")
+#install.packages("dplyr")
+</code></pre>
+
+<p>Adding <code class="highlighter-rouge">#</code> in front of a line (or a section of a line) turns it into a <code class="highlighter-rouge">comment</code> and it will not longer be executed.</p>
+
+<h2 id="random-errors">Random errors:</h2>
+
+<p>Think about the following two lines of code. Any issues that you can explain? (You might want to run these lines in R to get some clues)</p>
+
+<ul>
+  <li><code class="highlighter-rouge">`?median`</code></li>
+  <li><code class="highlighter-rouge">variable1 &lt;- DigitalHumanities</code></li>
+</ul>
+
 <h2 id="submitting-homework">Submitting homework:</h2>
 
 <ul>
@@ -281,7 +317,7 @@ output:
 </footer>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="/js/main.js?1584015582269195000"></script>
+<script type="text/javascript" src="/js/main.js?1584380177403685000"></script>
 
 
     </div>
