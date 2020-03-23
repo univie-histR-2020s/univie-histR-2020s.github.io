@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
 
-  <title>L02 Basics of R: Data Structures and Subsetting</title>
-  <meta name="description" content="Goals:
+  <title>L03 Basics of R: Data Manipulation & Exloratory Analysis</title>
+  <meta name="description" content="Goals
 
 ">
   <meta name="author" content="Maxim Romanov">
@@ -18,8 +18,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="L02 Basics of R: Data Structures and Subsetting">
-  <meta name="twitter:description" content="Goals:
+  <meta name="twitter:title" content="L03 Basics of R: Data Manipulation & Exloratory Analysis">
+  <meta name="twitter:description" content="Goals
 
 ">
   
@@ -28,8 +28,8 @@
   <meta name="twitter:image" content="/images/favicons/favicon-194x194.png" />
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="L02 Basics of R: Data Structures and Subsetting">
-  <meta property="og:description" content="Goals:
+  <meta property="og:title" content="L03 Basics of R: Data Manipulation & Exloratory Analysis">
+  <meta property="og:description" content="Goals
 
 ">
   <meta property="og:image" content="/images/favicons/favicon-194x194.png" />
@@ -55,7 +55,7 @@
   <meta name="theme-color" content="#ffffff">
   
   <link rel="stylesheet" href="/css/main.css?1584956253894212000">
-  <link rel="canonical" href="http://localhost:4000/2020/L02/">
+  <link rel="canonical" href="http://localhost:4000/2020/L03/">
   <link rel="alternate" type="application/rss+xml" title="DH Methods: Historical Inquiries with R (2020S)" href="/feed.xml">
 </head>
 
@@ -158,131 +158,55 @@
         <article class="post-container post-container--single">
   <header class="post-header">
     <div class="post-meta">
-      <time datetime="2020-03-09 00:00" class="post-meta__date date">9 Mar 2020</time>
+      <time datetime="2020-03-10 00:00" class="post-meta__date date">10 Mar 2020</time>
       
-      &#8226; <span class="post-meta__tags">on <a href="/tags/#basics">basics</a>, <a href="/tags/#data structures">data structures</a></span>
+      &#8226; <span class="post-meta__tags">on <a href="/tags/#manipulating data">manipulating data</a>, <a href="/tags/#exploratory analysis">exploratory analysis</a></span>
       
     </div>
-    <h1 class="post-title">L02 Basics of R: Data Structures and Subsetting</h1>
+    <h1 class="post-title">L03 Basics of R: Data Manipulation & Exloratory Analysis</h1>
   </header>
 
   <section class="post">
-    <h1 id="goals">Goals:</h1>
+    <h1 id="goals">Goals</h1>
 
-<ul>
-  <li>Getting to know main data structures in R</li>
-</ul>
-
-<h1 id="software">Software:</h1>
-
-<ul>
-  <li><em>the same</em>, with some new libraries:
-    <ul>
-      <li>R <a href="https://www.r-project.org/">https://www.r-project.org/</a></li>
-      <li>R Studio <a href="https://www.rstudio.com/">https://www.rstudio.com/</a></li>
-    </ul>
-  </li>
-</ul>
+<p>Getting to know the basics of working with data: manipulating data, basic techniques of exploratory analysis</p>
 
 <h1 id="class">Class:</h1>
 
 <ul>
-  <li>Practice worksheet: <a href="../../files/02_worksheets_data-structures.Rmd.zip"><code class="highlighter-rouge">02_worksheets_data-structures.Rmd.zip</code></a></li>
+  <li><a href="../../files/03_worksheets_data-manipulation-introduction.Rmd.zip"><code class="highlighter-rouge">03_worksheets_data-manipulation-introduction.Rmd.zip</code></a></li>
+  <li><a href="../../files/04_worksheets_data-manipulation-continued.Rmd.zip"><code class="highlighter-rouge">04_worksheets_data-manipulation-continued.Rmd.zip</code></a></li>
 </ul>
 
 <p><strong>NB:</strong> Original worksheets prepared by Lincoln Mullen, GMU (<a href="https://dh-r.lincolnmullen.com/worksheets.html">https://dh-r.lincolnmullen.com/worksheets.html</a>)</p>
 
-<h2 id="topics-data-structures--types">Topics: Data Structures &amp; Types</h2>
+<h2 id="topics">Topics</h2>
 
 <ul>
-  <li>Data structures
-    <ul>
-      <li>Vectors</li>
-      <li>Matrices</li>
-      <li>Data frames</li>
-      <li>Lists</li>
-    </ul>
-  </li>
-  <li>Subsetting operations</li>
-</ul>
-
-<h3 id="additional-notes">Additional notes:</h3>
-
-<ul>
-  <li><code class="highlighter-rouge">str()</code> compactly dysplays information about an R object</li>
-  <li><code class="highlighter-rouge">typeof()</code> determines the internal type or storage mode of an R object</li>
-  <li><code class="highlighter-rouge">class()</code> tells you the data structure of an R object:
-    <ul>
-      <li><code class="highlighter-rouge">list</code></li>
-      <li><code class="highlighter-rouge">data.frame</code></li>
-      <li><code class="highlighter-rouge">matrix</code></li>
-      <li>vector
-        <ul>
-          <li><code class="highlighter-rouge">numeric</code>
-            <ul>
-              <li><code class="highlighter-rouge">typeof()</code> &gt; <code class="highlighter-rouge">double</code> — a double-precision vector (floats; default numberic vector type)</li>
-              <li><code class="highlighter-rouge">typeof()</code> &gt; <code class="highlighter-rouge">integer</code> — a vector of integers</li>
-            </ul>
-          </li>
-          <li><code class="highlighter-rouge">character</code>
-            <ul>
-              <li><code class="highlighter-rouge">typeof()</code> &gt; <code class="highlighter-rouge">character</code> — a vector of strings/characters</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li><strong>Checking class/type &amp; Conversion</strong>
-    <ul>
-      <li>create <code class="highlighter-rouge">test &lt;- c(1,2,3,4,5)</code>
-        <ul>
-          <li><code class="highlighter-rouge">is.___</code> tests whether a variable of a <code class="highlighter-rouge">___</code> <em>class</em>.
-            <ul>
-              <li>or <em>type</em>: check the <code class="highlighter-rouge">typeof()</code> our <code class="highlighter-rouge">test</code> vector; then try <code class="highlighter-rouge">test.ch &lt;- as.character(test)</code> and check the type again; can you convert it back into its initial type?).</li>
-            </ul>
-          </li>
-          <li><code class="highlighter-rouge">is.___</code> converts into a <code class="highlighter-rouge">___</code> <em>class</em>.</li>
-          <li>(<code class="highlighter-rouge">___</code> is either: <code class="highlighter-rouge">vector</code>, <code class="highlighter-rouge">matrix</code>, <code class="highlighter-rouge">data.frame</code>, <code class="highlighter-rouge">list</code>)</li>
-        </ul>
-      </li>
-      <li>Now try the following commands and check the type and class of the new objects:
-        <ul>
-          <li><code class="highlighter-rouge">test.matrix &lt;- as.matrix(test)</code></li>
-          <li><code class="highlighter-rouge">test.df &lt;- as.data.frame(test)</code></li>
-          <li><code class="highlighter-rouge">test.list &lt;- as.list(test)</code></li>
-          <li><code class="highlighter-rouge">test.vector &lt;- as.vector(test.df$test)</code></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+  <li>Selecting columns (<code class="highlighter-rouge">select()</code>)</li>
+  <li>Filtering rows (<code class="highlighter-rouge">filter()</code>)</li>
+  <li>Creating new columns (<code class="highlighter-rouge">mutate()</code>)</li>
+  <li>Sorting columns (<code class="highlighter-rouge">arrange()</code>)</li>
+  <li>Split-apply-combine (<code class="highlighter-rouge">group_by()</code>)</li>
+  <li>Summarizing or aggregating data (<code class="highlighter-rouge">summarize()</code>)</li>
+  <li>Data joining with two table verbs (<code class="highlighter-rouge">left_join()</code> et al.)</li>
+  <li>Data reshaping (<code class="highlighter-rouge">spread()</code> and <code class="highlighter-rouge">gather()</code>)</li>
 </ul>
 
 <h1 id="reference-materials">Reference materials:</h1>
 
+<p>Consult relevant chapters from:</p>
+
 <ul>
-  <li>Read two chapters from: Wickham, Hadley. <em>Advanced R, Second Edition.</em> 2 edition. Boca Raton: Chapman and Hall/CRC, 2019. <a href="http://adv-r.had.co.nz/">http://adv-r.had.co.nz/</a>
-    <ul>
-      <li><a href="http://adv-r.had.co.nz/Data-structures.html">Data structures</a></li>
-      <li><a href="http://adv-r.had.co.nz/Subsetting.html">Subsetting</a></li>
-    </ul>
-  </li>
-  <li>For the next class, read the following article (in <em>open access</em>, simply follow the link):
-    <ul>
-      <li>Broman, Karl W., and Kara H. Woo. 2018. “Data Organization in Spreadsheets.” <em>The American Statistician</em> 72 (1): 2–10. <a href="https://doi.org/10.1080/00031305.2017.1375989">https://doi.org/10.1080/00031305.2017.1375989</a>.</li>
-    </ul>
-  </li>
-  <li><strong>Additional readings</strong>:
-    <ul>
-      <li>Read <em>Introduction</em> to Lincoln A. Mullen, <em>Computational Historical Thinking: With Applications in R (2018–)</em>: (<a href="http://dh-r.lincolnmullen.com/introduction.html">http://dh-r.lincolnmullen.com/introduction.html</a>)</li>
-    </ul>
-  </li>
+  <li>Healy, Kieran <em>Data Visualization: A Practical Guide</em>. Princeton University Press, 2018. ISBN: 978-0691181622. <a href="http://socviz.co/">http://socviz.co/</a></li>
+  <li>Hadley Wickham &amp; Garrett Grolemund, <em>R for Data Science: Import, Tidy, Transform, Visualize, and Model Data.</em> O’Reilly, 2017. ISBN: 978-1491910399. <a href="https://r4ds.had.co.nz/">https://r4ds.had.co.nz/</a></li>
+  <li>Wickham, Hadley. <em>Advanced R, Second Edition.</em> 2 edition. Boca Raton: Chapman and Hall/CRC, 2019. <a href="http://adv-r.had.co.nz/">http://adv-r.had.co.nz/</a></li>
 </ul>
 
 <h1 id="homework">Homework:</h1>
 
 <ul>
-  <li>Finish your worksheet and submit your HW as described below.</li>
+  <li>Finish your worksheets and submit as described below.</li>
 </ul>
 
 <h2 id="submitting-homework">Submitting homework:</h2>

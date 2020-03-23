@@ -5,9 +5,77 @@
     <description>070184 UE Methodenkurs - DH Methods: Historical Inquiries with R (2020S)&lt;br&gt;Instructor Dr. Maxim G. Romanov&lt;br&gt;Department of History&lt;br&gt;—University of Vienna—</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 16 Mar 2020 18:36:17 +0100</pubDate>
-    <lastBuildDate>Mon, 16 Mar 2020 18:36:17 +0100</lastBuildDate>
+    <pubDate>Mon, 23 Mar 2020 10:37:33 +0100</pubDate>
+    <lastBuildDate>Mon, 23 Mar 2020 10:37:33 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>L03 Basics of R: Data Manipulation &amp; Exloratory Analysis</title>
+        <description>&lt;h1 id=&quot;goals&quot;&gt;Goals&lt;/h1&gt;
+
+&lt;p&gt;Getting to know the basics of working with data: manipulating data, basic techniques of exploratory analysis&lt;/p&gt;
+
+&lt;h1 id=&quot;class&quot;&gt;Class:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/03_worksheets_data-manipulation-introduction.Rmd.zip&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;03_worksheets_data-manipulation-introduction.Rmd.zip&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/04_worksheets_data-manipulation-continued.Rmd.zip&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;04_worksheets_data-manipulation-continued.Rmd.zip&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;NB:&lt;/strong&gt; Original worksheets prepared by Lincoln Mullen, GMU (&lt;a href=&quot;https://dh-r.lincolnmullen.com/worksheets.html&quot;&gt;https://dh-r.lincolnmullen.com/worksheets.html&lt;/a&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;topics&quot;&gt;Topics&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Selecting columns (&lt;code class=&quot;highlighter-rouge&quot;&gt;select()&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Filtering rows (&lt;code class=&quot;highlighter-rouge&quot;&gt;filter()&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Creating new columns (&lt;code class=&quot;highlighter-rouge&quot;&gt;mutate()&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Sorting columns (&lt;code class=&quot;highlighter-rouge&quot;&gt;arrange()&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Split-apply-combine (&lt;code class=&quot;highlighter-rouge&quot;&gt;group_by()&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Summarizing or aggregating data (&lt;code class=&quot;highlighter-rouge&quot;&gt;summarize()&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Data joining with two table verbs (&lt;code class=&quot;highlighter-rouge&quot;&gt;left_join()&lt;/code&gt; et al.)&lt;/li&gt;
+  &lt;li&gt;Data reshaping (&lt;code class=&quot;highlighter-rouge&quot;&gt;spread()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;gather()&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference-materials&quot;&gt;Reference materials:&lt;/h1&gt;
+
+&lt;p&gt;Consult relevant chapters from:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Healy, Kieran &lt;em&gt;Data Visualization: A Practical Guide&lt;/em&gt;. Princeton University Press, 2018. ISBN: 978-0691181622. &lt;a href=&quot;http://socviz.co/&quot;&gt;http://socviz.co/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Hadley Wickham &amp;amp; Garrett Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data.&lt;/em&gt; O’Reilly, 2017. ISBN: 978-1491910399. &lt;a href=&quot;https://r4ds.had.co.nz/&quot;&gt;https://r4ds.had.co.nz/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Wickham, Hadley. &lt;em&gt;Advanced R, Second Edition.&lt;/em&gt; 2 edition. Boca Raton: Chapman and Hall/CRC, 2019. &lt;a href=&quot;http://adv-r.had.co.nz/&quot;&gt;http://adv-r.had.co.nz/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Finish your worksheets and submit as described below.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Homework assignment must be submitted by the beginning of the next class;&lt;/li&gt;
+  &lt;li&gt;Email your homework to the instructor as attachments.
+    &lt;ul&gt;
+      &lt;li&gt;In the subject of your email, please, add the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the numnber of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 10 Mar 2020 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/2020/L03/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/L03/</guid>
+        
+        <category>manipulating data</category>
+        
+        <category>exploratory analysis</category>
+        
+        
+        <category>lessons</category>
+        
+      </item>
     
       <item>
         <title>L02 Basics of R: Data Structures and Subsetting</title>
@@ -34,6 +102,8 @@
   &lt;li&gt;Practice worksheet: &lt;a href=&quot;../../files/02_worksheets_data-structures.Rmd.zip&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;02_worksheets_data-structures.Rmd.zip&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;strong&gt;NB:&lt;/strong&gt; Original worksheets prepared by Lincoln Mullen, GMU (&lt;a href=&quot;https://dh-r.lincolnmullen.com/worksheets.html&quot;&gt;https://dh-r.lincolnmullen.com/worksheets.html&lt;/a&gt;)&lt;/p&gt;
+
 &lt;h2 id=&quot;topics-data-structures--types&quot;&gt;Topics: Data Structures &amp;amp; Types&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -46,6 +116,58 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Subsetting operations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;additional-notes&quot;&gt;Additional notes:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;str()&lt;/code&gt; compactly dysplays information about an R object&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;typeof()&lt;/code&gt; determines the internal type or storage mode of an R object&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;class()&lt;/code&gt; tells you the data structure of an R object:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;list&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;data.frame&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;matrix&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;vector
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;numeric&lt;/code&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;typeof()&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;double&lt;/code&gt; — a double-precision vector (floats; default numberic vector type)&lt;/li&gt;
+              &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;typeof()&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;integer&lt;/code&gt; — a vector of integers&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;character&lt;/code&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;typeof()&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;character&lt;/code&gt; — a vector of strings/characters&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Checking class/type &amp;amp; Conversion&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;create &lt;code class=&quot;highlighter-rouge&quot;&gt;test &amp;lt;- c(1,2,3,4,5)&lt;/code&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is.___&lt;/code&gt; tests whether a variable of a &lt;code class=&quot;highlighter-rouge&quot;&gt;___&lt;/code&gt; &lt;em&gt;class&lt;/em&gt;.
+            &lt;ul&gt;
+              &lt;li&gt;or &lt;em&gt;type&lt;/em&gt;: check the &lt;code class=&quot;highlighter-rouge&quot;&gt;typeof()&lt;/code&gt; our &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt; vector; then try &lt;code class=&quot;highlighter-rouge&quot;&gt;test.ch &amp;lt;- as.character(test)&lt;/code&gt; and check the type again; can you convert it back into its initial type?).&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is.___&lt;/code&gt; converts into a &lt;code class=&quot;highlighter-rouge&quot;&gt;___&lt;/code&gt; &lt;em&gt;class&lt;/em&gt;.&lt;/li&gt;
+          &lt;li&gt;(&lt;code class=&quot;highlighter-rouge&quot;&gt;___&lt;/code&gt; is either: &lt;code class=&quot;highlighter-rouge&quot;&gt;vector&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;matrix&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;data.frame&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;list&lt;/code&gt;)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Now try the following commands and check the type and class of the new objects:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test.matrix &amp;lt;- as.matrix(test)&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test.df &amp;lt;- as.data.frame(test)&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test.list &amp;lt;- as.list(test)&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test.vector &amp;lt;- as.vector(test.df$test)&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;reference-materials&quot;&gt;Reference materials:&lt;/h1&gt;
@@ -157,6 +279,8 @@ output:
 &lt;h2 id=&quot;starting-with-our-first-workbook&quot;&gt;Starting with our first workbook:&lt;/h2&gt;
 
 &lt;p&gt;Now, download a worksheet file (&lt;a href=&quot;../../files/01_worksheets_familiar-with-r.Rmd.zip&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;01_worksheets_familiar-with-r.Rmd.zip&lt;/code&gt;&lt;/a&gt;). Unzip it and open in &lt;code class=&quot;highlighter-rouge&quot;&gt;RStudio&lt;/code&gt;. Let’s work through it!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NB:&lt;/strong&gt; Original worksheets prepared by Lincoln Mullen, GMU (&lt;a href=&quot;https://dh-r.lincolnmullen.com/worksheets.html&quot;&gt;https://dh-r.lincolnmullen.com/worksheets.html&lt;/a&gt;)&lt;/p&gt;
 
 &lt;h2 id=&quot;topics-covered&quot;&gt;Topics covered:&lt;/h2&gt;
 
