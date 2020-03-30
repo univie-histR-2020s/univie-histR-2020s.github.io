@@ -5,9 +5,88 @@
     <description>070184 UE Methodenkurs - DH Methods: Historical Inquiries with R (2020S)&lt;br&gt;Instructor Dr. Maxim G. Romanov&lt;br&gt;Department of History&lt;br&gt;—University of Vienna—</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 23 Mar 2020 10:37:33 +0100</pubDate>
-    <lastBuildDate>Mon, 23 Mar 2020 10:37:33 +0100</lastBuildDate>
+    <pubDate>Sun, 29 Mar 2020 15:10:50 +0200</pubDate>
+    <lastBuildDate>Sun, 29 Mar 2020 15:10:50 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>L04 Basics of R: Data Visualization; Functions</title>
+        <description>&lt;h1 id=&quot;goals&quot;&gt;Goals&lt;/h1&gt;
+
+&lt;p&gt;Getting to know the basics of data visualization; writing simple functions (reusable, packaged code)&lt;/p&gt;
+
+&lt;h1 id=&quot;class&quot;&gt;Class:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;05_worksheets_ggplot2-introduction-MGR-mod.Rmd.zip&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/06_worksheets_functions.Rmd.zip&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;06_worksheets_functions.Rmd.zip&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;topics&quot;&gt;Topics&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Basics of using &lt;code class=&quot;highlighter-rouge&quot;&gt;ggplot2&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Basic &lt;code class=&quot;highlighter-rouge&quot;&gt;geoms&lt;/code&gt; in ggplot2
+        &lt;ul&gt;
+          &lt;li&gt;Histogram&lt;/li&gt;
+          &lt;li&gt;Lines&lt;/li&gt;
+          &lt;li&gt;Bar plots&lt;/li&gt;
+          &lt;li&gt;Faceting&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Labels&lt;/li&gt;
+      &lt;li&gt;Create your own plots&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Writing your own functions
+    &lt;ul&gt;
+      &lt;li&gt;Explanation of functions&lt;/li&gt;
+      &lt;li&gt;Function calls&lt;/li&gt;
+      &lt;li&gt;Function definition&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference-materials&quot;&gt;Reference materials:&lt;/h1&gt;
+
+&lt;p&gt;Consult relevant chapters from:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Healy, Kieran &lt;em&gt;Data Visualization: A Practical Guide&lt;/em&gt;. Princeton University Press, 2018. ISBN: 978-0691181622. &lt;a href=&quot;http://socviz.co/&quot;&gt;http://socviz.co/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Hadley Wickham &amp;amp; Garrett Grolemund, &lt;em&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data.&lt;/em&gt; O’Reilly, 2017. ISBN: 978-1491910399. &lt;a href=&quot;https://r4ds.had.co.nz/&quot;&gt;https://r4ds.had.co.nz/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Wickham, Hadley. &lt;em&gt;Advanced R, Second Edition.&lt;/em&gt; 2 edition. Boca Raton: Chapman and Hall/CRC, 2019. &lt;a href=&quot;http://adv-r.had.co.nz/&quot;&gt;http://adv-r.had.co.nz/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Finish your worksheets and submit as described below.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Homework assignment must be submitted by the beginning of the next class;&lt;/li&gt;
+  &lt;li&gt;Email your homework to the instructor as attachments.
+    &lt;ul&gt;
+      &lt;li&gt;In the subject of your email, please, add the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the numnber of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 29 Mar 2020 00:00:00 +0100</pubDate>
+        <link>http://localhost:4000/2020/L04/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/L04/</guid>
+        
+        <category>data visualization</category>
+        
+        <category>functions</category>
+        
+        
+        <category>lessons</category>
+        
+      </item>
     
       <item>
         <title>L03 Basics of R: Data Manipulation &amp; Exloratory Analysis</title>
@@ -51,6 +130,16 @@
 
 &lt;ul&gt;
   &lt;li&gt;Finish your worksheets and submit as described below.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Additional:&lt;/em&gt; if you’d like more practice, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;swirl&lt;/code&gt; library:
+    &lt;ul&gt;
+      &lt;li&gt;To install: &lt;code class=&quot;highlighter-rouge&quot;&gt;install.packages(&quot;swirl&quot;)&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;To run: &lt;code class=&quot;highlighter-rouge&quot;&gt;library(swirl)&lt;/code&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Then: &lt;code class=&quot;highlighter-rouge&quot;&gt;swirl()&lt;/code&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
@@ -64,7 +153,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Tue, 10 Mar 2020 00:00:00 +0100</pubDate>
+        <pubDate>Sun, 22 Mar 2020 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/2020/L03/</link>
         <guid isPermaLink="true">http://localhost:4000/2020/L03/</guid>
         
@@ -208,7 +297,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Mon, 09 Mar 2020 00:00:00 +0100</pubDate>
+        <pubDate>Sun, 15 Mar 2020 00:00:00 +0100</pubDate>
         <link>http://localhost:4000/2020/L02/</link>
         <guid isPermaLink="true">http://localhost:4000/2020/L02/</guid>
         
