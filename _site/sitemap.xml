@@ -3,6 +3,36 @@
   
     
     <url>
+      <loc>http://localhost:4000/2020/L06/</loc>
+      
+        <lastmod>2020-04-18T00:00:00+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/2020/L05/</loc>
+      
+        <lastmod>2020-04-18T00:00:00+02:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.5</priority>
+      
+    </url>
+    
+  
+    
+    <url>
       <loc>http://localhost:4000/2020/L04/</loc>
       
         <lastmod>2020-03-29T00:00:00+01:00</lastmod>
@@ -81,7 +111,7 @@
     <url>
       <loc>http://localhost:4000/files/01_worksheets_familiar-with-r.Rmd</loc>
       
-        <lastmod>2020-03-29T15:10:50+02:00</lastmod>
+        <lastmod>2020-04-18T15:05:32+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -96,7 +126,7 @@
     <url>
       <loc>http://localhost:4000/files/02_worksheets_data-structures.Rmd</loc>
       
-        <lastmod>2020-03-29T15:10:50+02:00</lastmod>
+        <lastmod>2020-04-18T15:05:32+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -111,7 +141,7 @@
     <url>
       <loc>http://localhost:4000/files/03_worksheets_data-manipulation-introduction.Rmd</loc>
       
-        <lastmod>2020-03-29T15:10:50+02:00</lastmod>
+        <lastmod>2020-04-18T15:05:32+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -126,7 +156,7 @@
     <url>
       <loc>http://localhost:4000/files/04_worksheets_data-manipulation-continued.Rmd</loc>
       
-        <lastmod>2020-03-29T15:10:50+02:00</lastmod>
+        <lastmod>2020-04-18T15:05:32+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -141,7 +171,7 @@
     <url>
       <loc>http://localhost:4000/files/05_worksheets_ggplot2-introduction-MGR-mod.Rmd</loc>
       
-        <lastmod>2020-03-29T15:10:50+02:00</lastmod>
+        <lastmod>2020-04-18T15:05:32+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -156,7 +186,7 @@
     <url>
       <loc>http://localhost:4000/files/06_worksheets_functions.Rmd</loc>
       
-        <lastmod>2020-03-29T15:10:50+02:00</lastmod>
+        <lastmod>2020-04-18T15:05:32+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -171,7 +201,7 @@
     <url>
       <loc>http://localhost:4000/files/07_worksheets_window-functions.Rmd</loc>
       
-        <lastmod>2020-03-29T15:10:50+02:00</lastmod>
+        <lastmod>2020-04-18T15:05:32+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -188,7 +218,7 @@
     <url>
       <loc>http://localhost:4000/feed.xml</loc>
       
-        <lastmod>2020-03-29T15:10:50+02:00</lastmod>
+        <lastmod>2020-04-18T15:05:32+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -203,7 +233,7 @@
     <url>
       <loc>http://localhost:4000/humans.txt</loc>
       
-        <lastmod>2020-03-29T15:10:50+02:00</lastmod>
+        <lastmod>2020-04-18T15:05:32+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -222,7 +252,7 @@
     <url>
       <loc>http://localhost:4000/css/main.css</loc>
       
-        <lastmod>2020-03-29T15:10:50+02:00</lastmod>
+        <lastmod>2020-04-18T15:05:32+02:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

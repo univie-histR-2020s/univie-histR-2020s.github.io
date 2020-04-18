@@ -29,7 +29,7 @@ The overall process is rather simple in terms of technological implementation, b
 	* These can be categorized as **occupations**;
 	* Additionally, *blacksmith*, *coppersmith*, and *goldsmith* can also be categorized as **'metal industry'**, while *baker* and *confectioner*, can be categorized as **'food industry'**;
 	* Yet even more, one might want to introduce additional categories, such as **luxury production** to include items like *goldsmith* and *confectioner*; and **regular production** for items like *baker*, *blacksmith*, *coppersmith*.
-* Such categorizations can be created in two different way, with each having its advantages:
+* Such categorizations can be created in two different ways, with each having its advantages:
 	* first, one can create them as additional columns. This approach will allow to always have the original—or alternative—classifications at hand, which is helpful for re-thinking classifications and creating alternative ones where items will be reclassified differently, based on a  different set of assumptions about your subject.
 	* second, these can be created in separate files, which might be easier as one does not have to stare at existing classifications and therefore will be less influenced by them in making classification decisions.
 * Additionally, one can use some pre-existing classifications that have already been created in academic literature. These most likely need to be digitized and converted into properly formatted data, as we discussed in the previous lesson.
@@ -50,7 +50,7 @@ These are the terms that refer to the same idea. The notion of *proxies* is used
 
 The main idea behind these terms is that some simple *features* of an object can act as *proxies* to some complex phenomena.
 
-For example, Ian Morris uses the size of cities as a proxy to the complexity of social organization. The login is following: the larger the size of a city, the more complex social, economic and technical organization is required to keep that city functional, therefore is can be used as an indicator of the social complexity.
+For example, Ian Morris uses the size of cities as a proxy to the complexity of social organization. The logic is following: the larger the size of a city, the more complex social, economic and technical organization is required to keep that city functional, therefore is can be used as an indicator of the social complexity.
 
 While *proxies* are selected from what is available—usually not much, especially when it comes to historical data—as a way to approach something more complex, it may be argued that abstractions are often arrived to from the opposite direction. We start with an object which is available in its complexity and we reduce its complexity to a more manageable form which—we expect—would prepresent a particular aspect of the initial complex object. Most commonly this is applied to texts in a natural language. For example, in *stylometry* texts are reduced to freqiency lists of most frequent *features*, which are expected to represent an *authorial fingerprint*.
 
@@ -62,10 +62,16 @@ Data for the practical session and homework: [Bosker_Data.zip](../../files/Boske
 
 The zipped file includes everything you need for the practical session. Download and unzip (read the article at home!).
 
-**NB:** create a notebook and work through the following questions. Group work is encouraged. Please, explain in one or two sentences what you do in each step, so that your work is also human-readable.
+**Note:** create a notebook and work through the following questions. Group work is encouraged. Please, explain in one or two sentences what you do in each step, so that your work is also human-readable. Please, submit this notebook as your homework. MAke sure to name your file in the following manner: `070184-LXX-HW-YourLastName-YourMatriculationNumber.EXT`, where `LXX` is the number of the lesson for which you submit homework; `YourLastName` is your last name; and `YourMatriculationNumber` is your matriculation number; `EXT` is the extension of your file --- yopu can submit it either as HTML or as a PDF.
+
+
+## SECTION I.
+
+Please, provide your answers (2-3 sentences) to the following questions:
 
 * Can you figure which file contains data?
-* In which format is data? How can we load it into R?
+* In which format is data?
+* How can we load it into R? (Describe and provide working `R code`)
 * What is the chronological extent of this data?
 	* [*easy-ish*] What periods can it be divided into? How can we do that?
 * How can we introduce the following categories into this data:
@@ -73,14 +79,16 @@ The zipped file includes everything you need for the practical session. Download
 	* [*a bit more complicated*] the Austro-Hungarian Empire?
 	* [*a tad tricky*] Christiandom and Islamdom?
 
-Now very specific questions:
+## SECTION II
+
+Please, provide your answers as working `R code` and a couple of sentences to describe how you approach (2-3 sentences) the following problems:
 
 * What is the chronological extent of this data?
 	* [*easy-ish*] What periods can it be divided into? How can we do that?
 		* Can you generate a cumulative graph of population over time, divided into these periods? (*Hint:* there should be one line for one period and another for another, etc.)
 * How can we introduce the following categories into this data:
 	* [*easy*] North Africa and Europe?
-		* Can you construct comparative graphs of population in North Africa and Europe (similar to what you did with the Morris dataset). Here you will need to sum up population!
+		* Construct comparative graphs of population in North Africa and Europe (similar to what you did with the Morris dataset). Here you will need to sum up population!
 	* [*a bit more complicated*] the Austro-Hungarian Empire?
 		* When did the Empire had the largest number of cities (based on the data set)?
 		* When was its population at the highest?
