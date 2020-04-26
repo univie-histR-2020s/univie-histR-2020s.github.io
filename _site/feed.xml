@@ -5,9 +5,488 @@
     <description>070184 UE Methodenkurs - DH Methods: Historical Inquiries with R (2020S)&lt;br&gt;Instructor Dr. Maxim G. Romanov&lt;br&gt;Department of History&lt;br&gt;—University of Vienna—</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 18 Apr 2020 15:05:32 +0200</pubDate>
-    <lastBuildDate>Sat, 18 Apr 2020 15:05:32 +0200</lastBuildDate>
+    <pubDate>Sun, 26 Apr 2020 18:06:37 +0200</pubDate>
+    <lastBuildDate>Sun, 26 Apr 2020 18:06:37 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>L06 Data II: Modeling &amp; Manipulating</title>
+        <description>&lt;h1 id=&quot;goals&quot;&gt;Goals:&lt;/h1&gt;
+
+&lt;p&gt;Getting to know the basics of working with data: modeling, manipulating&lt;/p&gt;
+
+&lt;h1 id=&quot;software&quot;&gt;Software:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;R&lt;/li&gt;
+  &lt;li&gt;Excel, Google Spreadsheets, or any other alternative&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;in-class-i-theoretical-and-conceptual&quot;&gt;In Class I: &lt;em&gt;Theoretical and Conceptual&lt;/em&gt;&lt;/h1&gt;
+
+&lt;h2 id=&quot;ways-of-modeling-data-categorization&quot;&gt;Ways of modeling data: Categorization&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“[Modeling is] a continual process of coming to know by manipulating representations.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Willard McCarty, “Modeling: A Study in Words and Meanings,” in Susan Schreibman, Ray Siemens, and John Unsworth, &lt;em&gt;A New Companion to Digital Humanities&lt;/em&gt;, 2nd ed. (Chichester, UK, 2016), &lt;a href=&quot;http://www.digitalhumanities.org/companion/&quot;&gt;http://www.digitalhumanities.org/companion/&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One of the most common way of modeling data in historical research—joining items into broader categories. Categorization is important because it allows to group items with low frequencies into items with higher frequencies, and through those discern patterns and trends. Additionally, alternative categorizations allow one to test different perspectives on historical data.&lt;/p&gt;
+
+&lt;p&gt;The overall process is rather simple in terms of technological implementation, but is quite complex in terms of subject knowledge and specialized expertise is required to make well-informed decisions.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For example, let’s say we have the following categories: &lt;em&gt;baker&lt;/em&gt;, &lt;em&gt;blacksmith&lt;/em&gt;, &lt;em&gt;coppersmith&lt;/em&gt;, &lt;em&gt;confectioner&lt;/em&gt;, and &lt;em&gt;goldsmith&lt;/em&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;These can be categorized as &lt;strong&gt;occupations&lt;/strong&gt;;&lt;/li&gt;
+      &lt;li&gt;Additionally, &lt;em&gt;blacksmith&lt;/em&gt;, &lt;em&gt;coppersmith&lt;/em&gt;, and &lt;em&gt;goldsmith&lt;/em&gt; can also be categorized as &lt;strong&gt;‘metal industry’&lt;/strong&gt;, while &lt;em&gt;baker&lt;/em&gt; and &lt;em&gt;confectioner&lt;/em&gt;, can be categorized as &lt;strong&gt;‘food industry’&lt;/strong&gt;;&lt;/li&gt;
+      &lt;li&gt;Yet even more, one might want to introduce additional categories, such as &lt;strong&gt;luxury production&lt;/strong&gt; to include items like &lt;em&gt;goldsmith&lt;/em&gt; and &lt;em&gt;confectioner&lt;/em&gt;; and &lt;strong&gt;regular production&lt;/strong&gt; for items like &lt;em&gt;baker&lt;/em&gt;, &lt;em&gt;blacksmith&lt;/em&gt;, &lt;em&gt;coppersmith&lt;/em&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Such categorizations can be created in two different ways, with each having its advantages:
+    &lt;ul&gt;
+      &lt;li&gt;first, one can create them as additional columns. This approach will allow to always have the original—or alternative—classifications at hand, which is helpful for re-thinking classifications and creating alternative ones where items will be reclassified differently, based on a  different set of assumptions about your subject.&lt;/li&gt;
+      &lt;li&gt;second, these can be created in separate files, which might be easier as one does not have to stare at existing classifications and therefore will be less influenced by them in making classification decisions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Additionally, one can use some pre-existing classifications that have already been created in academic literature. These most likely need to be digitized and converted into properly formatted data, as we discussed in the previous lesson.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;normalization&quot;&gt;Normalization&lt;/h2&gt;
+
+&lt;p&gt;This is a rather simple, yet important procedure, which is, on the technical side, very similar to what was described above. In essence, the main goal of normalization is to remove insignificant differences that may hinder analysis.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Most common examples would be:
+    &lt;ul&gt;
+      &lt;li&gt;bringing information to the same format (e.g., dates, names, etc.)&lt;/li&gt;
+      &lt;li&gt;unifying spelling differences&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It is a safe practice to &lt;strong&gt;preserve the initial data&lt;/strong&gt;, creating &lt;em&gt;normalized&lt;/em&gt; data in separate columns (or tables)&lt;/p&gt;
+
+&lt;h2 id=&quot;note-proxies-features-abstractions&quot;&gt;Note: &lt;em&gt;Proxies&lt;/em&gt;, &lt;em&gt;Features&lt;/em&gt;, &lt;em&gt;Abstractions&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;These are the terms that refer to the same idea. The notion of &lt;em&gt;proxies&lt;/em&gt; is used in data visualization, that of &lt;em&gt;features&lt;/em&gt;—in computer science; that of &lt;em&gt;abstractions&lt;/em&gt;—in the humanities.&lt;/p&gt;
+
+&lt;p&gt;The main idea behind these terms is that some simple &lt;em&gt;features&lt;/em&gt; of an object can act as &lt;em&gt;proxies&lt;/em&gt; to some complex phenomena.&lt;/p&gt;
+
+&lt;p&gt;For example, Ian Morris uses the size of cities as a proxy to the complexity of social organization. The logic is following: the larger the size of a city, the more complex social, economic and technical organization is required to keep that city functional, therefore is can be used as an indicator of the social complexity.&lt;/p&gt;
+
+&lt;p&gt;While &lt;em&gt;proxies&lt;/em&gt; are selected from what is available—usually not much, especially when it comes to historical data—as a way to approach something more complex, it may be argued that abstractions are often arrived to from the opposite direction. We start with an object which is available in its complexity and we reduce its complexity to a more manageable form which—we expect—would prepresent a particular aspect of the initial complex object. Most commonly this is applied to texts in a natural language. For example, in &lt;em&gt;stylometry&lt;/em&gt; texts are reduced to freqiency lists of most frequent &lt;em&gt;features&lt;/em&gt;, which are expected to represent an &lt;em&gt;authorial fingerprint&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The complexity of texts can be reduced in a number of ways: into a list of lemmas (e.g., for topic modeling analysis), frequency lists (e.g., for document distance comparison), syntactic structures, ngrams, etc. This list is never set and researchers can create multiple abstractions depending on their research questions.&lt;/p&gt;
+
+&lt;h1 id=&quot;in-class-ii-practical&quot;&gt;In Class II: &lt;em&gt;Practical&lt;/em&gt;&lt;/h1&gt;
+
+&lt;p&gt;Data for the practical session and homework: &lt;a href=&quot;../../files/Bosker_Data.zip&quot;&gt;Bosker_Data.zip&lt;/a&gt;. The data is available in open access and is a supplement to a study (see, &lt;em&gt;Reference Materials&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;The zipped file includes everything you need for the practical session. Download and unzip (read the article at home!).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; create a notebook and work through the following questions. Group work is encouraged. Please, explain in one or two sentences what you do in each step, so that your work is also human-readable. Please, submit this notebook as your homework. MAke sure to name your file in the following manner: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber.EXT&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the number of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number; &lt;code class=&quot;highlighter-rouge&quot;&gt;EXT&lt;/code&gt; is the extension of your file — yopu can submit it either as HTML or as a PDF.&lt;/p&gt;
+
+&lt;h2 id=&quot;section-i&quot;&gt;SECTION I.&lt;/h2&gt;
+
+&lt;p&gt;Please, provide your answers (2-3 sentences) to the following questions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Can you figure which file contains data?&lt;/li&gt;
+  &lt;li&gt;In which format is data?&lt;/li&gt;
+  &lt;li&gt;How can we load it into R? (Describe and provide working &lt;code class=&quot;highlighter-rouge&quot;&gt;R code&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;What is the chronological extent of this data?
+    &lt;ul&gt;
+      &lt;li&gt;[&lt;em&gt;easy-ish&lt;/em&gt;] What periods can it be divided into? How can we do that?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How can we introduce the following categories into this data:
+    &lt;ul&gt;
+      &lt;li&gt;[&lt;em&gt;easy&lt;/em&gt;] North Africa and Europe?&lt;/li&gt;
+      &lt;li&gt;[&lt;em&gt;a bit more complicated&lt;/em&gt;] the Austro-Hungarian Empire?&lt;/li&gt;
+      &lt;li&gt;[&lt;em&gt;a tad tricky&lt;/em&gt;] Christiandom and Islamdom?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-ii&quot;&gt;SECTION II&lt;/h2&gt;
+
+&lt;p&gt;Please, provide your answers as working &lt;code class=&quot;highlighter-rouge&quot;&gt;R code&lt;/code&gt; and a couple of sentences to describe how you approach (2-3 sentences) the following problems:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What is the chronological extent of this data?
+    &lt;ul&gt;
+      &lt;li&gt;[&lt;em&gt;easy-ish&lt;/em&gt;] What periods can it be divided into? How can we do that?
+        &lt;ul&gt;
+          &lt;li&gt;Can you generate a cumulative graph of population over time, divided into these periods? (&lt;em&gt;Hint:&lt;/em&gt; there should be one line for one period and another for another, etc.)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;How can we introduce the following categories into this data:
+    &lt;ul&gt;
+      &lt;li&gt;[&lt;em&gt;easy&lt;/em&gt;] North Africa and Europe?
+        &lt;ul&gt;
+          &lt;li&gt;Construct comparative graphs of population in North Africa and Europe (similar to what you did with the Morris dataset). Here you will need to sum up population!&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;[&lt;em&gt;a bit more complicated&lt;/em&gt;] the Austro-Hungarian Empire?
+        &lt;ul&gt;
+          &lt;li&gt;When did the Empire had the largest number of cities (based on the data set)?&lt;/li&gt;
+          &lt;li&gt;When was its population at the highest?&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;[&lt;em&gt;a tad tricky&lt;/em&gt;] Christiandom and Islamdom?
+        &lt;ul&gt;
+          &lt;li&gt;What are the largest cities of Islamdom for each reported period?&lt;/li&gt;
+          &lt;li&gt;What are the largest western cities of Islamdom between 1000 and 1500 CE?&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference-materials&quot;&gt;Reference Materials&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bosker, Maarten, Eltjo Buringh, and Jan Luiten van Zanden. 2012. “From Baghdad to London: Unraveling Urban Development in Europe, the Middle East, and North Africa, 800–1800.” &lt;em&gt;The Review of Economics and Statistics&lt;/em&gt; 95 (4): 1418–37. &lt;a href=&quot;https://doi.org/10.1162/REST_a_00284&quot;&gt;https://doi.org/10.1162/REST_a_00284&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Bosker, Maarten, Eltjo Buringh, and Jan Luiten Van Zanden. 2014. “Replication Data for: From Baghdad to London: Unraveling Urban Development in Europe, the Middle East, and North Africa, 800-1800.” &lt;em&gt;Harvard Dataverse&lt;/em&gt;. &lt;a href=&quot;https://doi.org/10.7910/DVN/24747&quot;&gt;https://doi.org/10.7910/DVN/24747&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;additional-readings&quot;&gt;Additional Readings&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Moretti, Franco. 2007. &lt;em&gt;Graphs, Maps, Trees: Abstract Models for Literary History&lt;/em&gt;. London - New York: Verso.&lt;/li&gt;
+  &lt;li&gt;Moretti, Franco. 2013. &lt;em&gt;Distant Reading.&lt;/em&gt; London ; New York: Verso.&lt;/li&gt;
+  &lt;li&gt;Romanov, Maxim G. 2017. “Algorithmic Analysis of Medieval Arabic Biographical Collections.” &lt;em&gt;Speculum&lt;/em&gt; 92 (S1): S226–46. &lt;a href=&quot;https://doi.org/10.1086/693970&quot;&gt;https://doi.org/10.1086/693970&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Finish the practical part and email your notebooks; submit as described below.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Homework assignment must be submitted by the beginning of the next class;&lt;/li&gt;
+  &lt;li&gt;Email your homework to the instructor as attachments.
+    &lt;ul&gt;
+      &lt;li&gt;In the subject of your email, please, add the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the numnber of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 26 Apr 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/L06/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/L06/</guid>
+        
+        <category>data</category>
+        
+        <category>modeling</category>
+        
+        <category>normalization</category>
+        
+        <category>proxies</category>
+        
+        <category>abstractions</category>
+        
+        <category>featureas</category>
+        
+        
+        <category>lessons</category>
+        
+      </item>
+    
+      <item>
+        <title>L05 Data I: Collecting, Organizing, Creating</title>
+        <description>&lt;h1 id=&quot;goals&quot;&gt;Goals:&lt;/h1&gt;
+
+&lt;p&gt;Getting to know the basics of working with data: collecting, creating, organizing.&lt;/p&gt;
+
+&lt;h1 id=&quot;software--other-required-materials&quot;&gt;Software &amp;amp; Other Required Materials&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;R&lt;/li&gt;
+  &lt;li&gt;OCR Engines (&lt;a href=&quot;https://www.onlineocr.net/&quot;&gt;https://www.onlineocr.net/&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Excel, Google Spreadsheets, or any other alternative&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;in-class-i-theoretical-and-conceptual&quot;&gt;In Class I: &lt;em&gt;Theoretical and Conceptual&lt;/em&gt;&lt;/h1&gt;
+
+&lt;h2 id=&quot;ways-of-obtaining-data&quot;&gt;Ways of obtaining data&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Reusing already produced data
+    &lt;ul&gt;
+      &lt;li&gt;One may require to mold data into a more fitting structure.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Creating one’s own dataset&lt;/li&gt;
+  &lt;li&gt;Digitizing data from printed and/or hand-written sources&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;main-format&quot;&gt;Main format&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Relational databases or Tables/Spreadsheets (&lt;em&gt;tabular data&lt;/em&gt;)?
+    &lt;ul&gt;
+      &lt;li&gt;Tabular format: tables; spreadsheets; CSV/TSV files.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Unique identifiers&lt;/em&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;tables with different data can be connected via &lt;em&gt;unique identifiers&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Note:&lt;/strong&gt; A relational database (rDB) is a collection of interconnected tables. Tables in an rDB are connected with each other via &lt;em&gt;unique identifiers&lt;/em&gt; which are usually automatically created by the database itself when new data is added.&lt;/li&gt;
+      &lt;li&gt;One can maintain interconnected tables without creating a rDB: &lt;em&gt;Open Linked Data&lt;/em&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Example&lt;/strong&gt;: Table of the growth of cities. One table includes information on population over time; Another table includes coordinates of the cities from the dataset. It is more efficient and practical (reducing error rate from typos) to work on these tables separately, and connect them via unique identifiers of cities which are used in both tables.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;note-on-the-csvtsv-format&quot;&gt;Note on the &lt;code class=&quot;highlighter-rouge&quot;&gt;CSV&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;TSV&lt;/code&gt; format&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CSV&lt;/code&gt; stands for &lt;em&gt;comma-separated values&lt;/em&gt;; &lt;code class=&quot;highlighter-rouge&quot;&gt;TSV&lt;/code&gt; — for &lt;em&gt;tab-separated values&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Below is an examples of a CSV format. Here, the first line is the &lt;em&gt;header&lt;/em&gt;, which provides the names of columns; each line is a row, while columns are separated with &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; commas.&lt;/p&gt;
+
+&lt;div class=&quot;language-cs highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;city&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;growth_from_2000_to_2013&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;latitude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;longitude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;population&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;state&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;New&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;York&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;40.7127837&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;74.0059413&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8405837&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;New&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;York&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Los&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Angeles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;34.0522342&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;118.2436849&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3884307&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;California&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Chicago&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;41.8781136&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;87.6297982&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2718782&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Illinois&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Houston&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;11.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;29.7604267&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;95.3698028&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2195914&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Texas&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;Philadelphia&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;39.9525839&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;75.1652215&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1553165&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Pennsylvania&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TSV&lt;/code&gt; is a better option than a &lt;code class=&quot;highlighter-rouge&quot;&gt;CSV&lt;/code&gt;, since TAB characters (&lt;code class=&quot;highlighter-rouge&quot;&gt;\t&lt;/code&gt;) are very unlikely to appear in values.&lt;/p&gt;
+
+&lt;p&gt;Neither &lt;code class=&quot;highlighter-rouge&quot;&gt;TSV&lt;/code&gt; not &lt;code class=&quot;highlighter-rouge&quot;&gt;CSV&lt;/code&gt; are good for preserving &lt;em&gt;new line characters&lt;/em&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;\n&lt;/code&gt;)—or, in other words, text split into multiple lines/paragraphs. As a workaround, one can convert &lt;code class=&quot;highlighter-rouge&quot;&gt;\n&lt;/code&gt; into some unlikely-to-occur character combination (for example, &lt;code class=&quot;highlighter-rouge&quot;&gt;;;;&lt;/code&gt;), which would be easy to restore into &lt;code class=&quot;highlighter-rouge&quot;&gt;\n&lt;/code&gt; later, if necessary.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-principles-of-organizing-data-tidy-data&quot;&gt;Basic principles of organizing data: &lt;em&gt;Tidy Data&lt;/em&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;tidy-data&quot;&gt;Tidy Data&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Each variable is in its own column&lt;/li&gt;
+  &lt;li&gt;Each observation is in its own row&lt;/li&gt;
+  &lt;li&gt;Each value is in its own cell&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;clean-data&quot;&gt;Clean Data&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Column names and row names are easy to use and informative. In general, it is a good practice to avoid &lt;code class=&quot;highlighter-rouge&quot;&gt;spaces&lt;/code&gt; and special characters.
+    &lt;ul&gt;
+      &lt;li&gt;Good example: &lt;code class=&quot;highlighter-rouge&quot;&gt;western_cities&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Alternative good example: &lt;code class=&quot;highlighter-rouge&quot;&gt;WesternCities&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Bad example: &lt;code class=&quot;highlighter-rouge&quot;&gt;Western Cities (only the largest)&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Obvious mistakes in the data have been removed
+    &lt;ul&gt;
+      &lt;li&gt;Date format: &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD&lt;/code&gt; is the most reliable format. Any thoughts why?&lt;/li&gt;
+      &lt;li&gt;There should be no empty &lt;code class=&quot;highlighter-rouge&quot;&gt;cells&lt;/code&gt;:
+        &lt;ul&gt;
+          &lt;li&gt;If you have them, it might be that your data is not organized properly.&lt;/li&gt;
+          &lt;li&gt;If your data is organized properly, &lt;code class=&quot;highlighter-rouge&quot;&gt;NA&lt;/code&gt; must be used as an explicit indication that data point is not available.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Each cell must contain only one piece of data.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Variable values must be internally consistent
+    &lt;ul&gt;
+      &lt;li&gt;Be consistent in coding your values: &lt;code class=&quot;highlighter-rouge&quot;&gt;M&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;man&lt;/code&gt; are different values computationally, but may be the same in the dataset;&lt;/li&gt;
+      &lt;li&gt;Keep track of your categories: a document where all codes used in the data set are explained.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Preserve original values
+    &lt;ul&gt;
+      &lt;li&gt;If you are working with a historical dataset, it might be inconsistent.
+        &lt;ul&gt;
+          &lt;li&gt;For example, distances between cities are given in different formats: days of travel, miles, &lt;em&gt;farsaḫ&lt;/em&gt;s/parasangs, etc.).&lt;/li&gt;
+          &lt;li&gt;Instead of replacing original values, it is better to create an additional column, where this information will be homogenized according to some principle.&lt;/li&gt;
+          &lt;li&gt;Keeping original data will allow to honogenize data in multiple ways (example: &lt;em&gt;day of travel&lt;/em&gt;).&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Clearly differentiate between the &lt;em&gt;original&lt;/em&gt; and &lt;em&gt;modified/modelled&lt;/em&gt; values.
+        &lt;ul&gt;
+          &lt;li&gt;The use of suffixes can be convenient: &lt;code class=&quot;highlighter-rouge&quot;&gt;Distance_Orig&lt;/code&gt; &lt;em&gt;vs&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Distance_Modified&lt;/code&gt;.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Most of editing operations should be performed in software other than R; any spreadsheet program will work, unless it cannot export into CSV/TSV format.
+    &lt;ul&gt;
+      &lt;li&gt;Keep in mind that if you prepare your data in an Excel-like program, rich formatting (like manual highlights, bolds, and italics) is not &lt;em&gt;data&lt;/em&gt; and it will be lost, when you export your data into CSV/TSV format.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Note:&lt;/strong&gt; It might be useful, however, to use rule-based highlighting in order, for example, to identify bad values that need to be fixed.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Back up your data!
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://github.com&quot;&gt;http://github.com&lt;/a&gt; is a great place for this, plus it allows to work collaboratively.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Google spreadsheets&lt;/strong&gt; is a decent alternative, but it lacks version control and detailed tracking of changes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--
+EXTRA NOTES
+
+https://lsru.github.io/tv_course/lecture05_tidyr.html#1
+
+https://arxiv.org/abs/1809.02264
+
+https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html
+http://vita.had.co.nz/papers/tidy-data.html // https://vita.had.co.nz/papers/tidy-data.pdf
+
+Jeff Leek in his book The Elements of Data Analytic Style (Jeff Leek, The Elements of Data Analytic Style, Leanpub, 2015-03-02) summarizes the characteristics of tidy data as the points:[3]
+
+Each variable you measure should be in one column.
+Each different observation of that variable should be in a different row.
+There should be one table for each &quot;kind&quot; of variable.
+If you have multiple tables, they should include a column in the table that allows them to be linked.
+--&gt;
+
+&lt;h1 id=&quot;in-class-ii-practical&quot;&gt;In Class II: &lt;em&gt;Practical&lt;/em&gt;&lt;/h1&gt;
+
+&lt;!--
+## Bulliet Dataset
+
+|![Sample_Page_With_Tabular_Data](./img/03/Sample_Page_With_Tabular_Data.png)|
+|:-:|
+|The data set shows chrono-geographical distribution of Islamic scholars, according to one of the medieval biographical sources. Source: Bulliet, Richard W. 2009. *Cotton, Climate, and Camels in Early Islamic Iran: A Moment in World History*. New York: Columbia University Press.|
+
+* Digitize a small data set from this [Sample_Page_With_Tabular_Data.zip](../files/03/Sample_Page_With_Tabular_Data.zip).
+* Fix the dataset so that it conforms to the principles of **tidy data**. What should be corrected?
+* Load the data set into R
+* Data for regions is given in relative values. Calculate absolute values. Graph chronological distribution of Islamic scholars from each region both in absolute and relative values.
+--&gt;
+
+&lt;h2 id=&quot;morris-dataset-the-east-vs-the-west&quot;&gt;Morris Dataset: &lt;em&gt;the East Vs. the West&lt;/em&gt;&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;&lt;img src=&quot;../../files/Sample_Page_With_Tabular_Data_Morris.png&quot; alt=&quot;Sample_Page_With_Tabular_Data_Morris.png&quot; /&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;War-making capacity since 4000 BCE (in social development points).&lt;/em&gt; &lt;strong&gt;Data source&lt;/strong&gt;: Morris, Ian. 2013. &lt;em&gt;The Measure of Civilization: How Social Development Decides the Fate of Nations&lt;/em&gt;. Princeton: Princeton University Press.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;difficulty-easy&quot;&gt;Difficulty: Easy&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Digitize “War-making capacity since 4000 BCE” from this file &lt;a href=&quot;../../files/Morris_2013_Combined.pdf&quot;&gt;Morris_2013_Combined.pdf&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Fix the dataset so that it conforms to the principles of &lt;strong&gt;tidy data&lt;/strong&gt;. What should be corrected?&lt;/li&gt;
+  &lt;li&gt;Load the data set into R&lt;/li&gt;
+  &lt;li&gt;Graph chronological changes in war-making capacities for the East and the West.&lt;/li&gt;
+  &lt;li&gt;When the East was in the lead?&lt;/li&gt;
+  &lt;li&gt;When the West was in the lead?&lt;/li&gt;
+  &lt;li&gt;How can you determine that? (&lt;em&gt;Hint&lt;/em&gt;: review logical operators and vector comparison).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;difficulty-more-complicated&quot;&gt;Difficulty: More complicated&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Digitize “Maximum Settlement Sizes” from this file &lt;a href=&quot;../../files/Morris_2013_Combined.pdf&quot;&gt;Morris_2013_Combined.pdf&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Fix the dataset so that it conforms to the principles of &lt;strong&gt;tidy data&lt;/strong&gt;. What should be corrected?&lt;/li&gt;
+  &lt;li&gt;The datasets for the East and the West are separate. What would be your strategies to combine them?&lt;/li&gt;
+  &lt;li&gt;Graph chronological changes in war-making capacities for the East and the West.&lt;/li&gt;
+  &lt;li&gt;When the East was in the lead? What were the most prominent settlements?&lt;/li&gt;
+  &lt;li&gt;When the West was in the lead? What were the most prominent settlements?&lt;/li&gt;
+  &lt;li&gt;How can you determine that? (&lt;em&gt;Hint&lt;/em&gt;: review logical operators and vector comparison).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!--
+
+Morris_2013_Combined_Raster.pdf
+
+Morris 2013 - The measure of civilization - War Making Capacity - Both.pdf
+Morris 2013 - The measure of civilization - Energy Capture - East.pdf
+Morris 2013 - The measure of civilization - Energy Capture - West.pdf
+Morris 2013 - The measure of civilization - Information Technology Scores - Both.pdf
+Morris 2013 - The measure of civilization - Maximum Settlement Sizes - East.pdf
+Morris 2013 - The measure of civilization - Maximum Settlement Sizes - West.pdf
+Morris 2013 - The measure of civilization - Social Development Score - East.pdf
+Morris 2013 - The measure of civilization - Social Development Score - West.pdf
+--&gt;
+
+&lt;h1 id=&quot;reference-materials&quot;&gt;Reference Materials:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Wickham, Hadley. 2014. “Tidy Data.” &lt;em&gt;Journal of Statistical Software 59 (10)&lt;/em&gt;. &lt;a href=&quot;https://doi.org/10.18637/jss.v059.i10&quot;&gt;https://doi.org/10.18637/jss.v059.i10&lt;/a&gt;. (The article in open access)
+    &lt;ul&gt;
+      &lt;li&gt;Check these slides: A. Ginolhac, E. Koncina, R. Krause. &lt;em&gt;Principles of Tidy Data: tidyr&lt;/em&gt; &lt;a href=&quot;https://lsru.github.io/tv_course/lecture05_tidyr.html&quot;&gt;https://lsru.github.io/tv_course/lecture05_tidyr.html&lt;/a&gt; (Also check their other lectures/slides: )&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Broman, Karl W., and Kara H. Woo. 2018. “Data Organization in Spreadsheets.” &lt;em&gt;The American Statistician&lt;/em&gt; 72 (1): 2–10. &lt;a href=&quot;https://doi.org/10.1080/00031305.2017.1375989&quot;&gt;https://doi.org/10.1080/00031305.2017.1375989&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;additional&quot;&gt;Additional&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Morris, Ian. 2013. &lt;em&gt;The Measure of Civilization: How Social Development Decides the Fate of Nations&lt;/em&gt;. Princeton: Princeton University Press.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Note:&lt;/strong&gt; This book is a methodological companion to: Morris, Ian. 2010. &lt;em&gt;Why the West Rules—for Now: The Patterns of History, and What They Reveal about the Future.&lt;/em&gt; New York: Farrar, Straus and Giroux.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;additional-readings&quot;&gt;Additional Readings&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Wickham, Hadley. 2014. “Tidy Data.” &lt;em&gt;Journal of Statistical Software 59 (10)&lt;/em&gt;. &lt;a href=&quot;https://doi.org/10.18637/jss.v059.i10&quot;&gt;https://doi.org/10.18637/jss.v059.i10&lt;/a&gt;. (The article in open access)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Finish the assignment started in class; email report (ideally, as a PDF, since now it will include graphs).&lt;/li&gt;
+  &lt;li&gt;Find your own small data set published in a book or an article; digitize it using strategies discussed in class; run some analytical tasks (anything from what you have learned so far); create a report.&lt;/li&gt;
+  &lt;li&gt;Email both reports.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Homework assignment must be submitted by the beginning of the next class;&lt;/li&gt;
+  &lt;li&gt;Email your homework to the instructor as attachments.
+    &lt;ul&gt;
+      &lt;li&gt;In the subject of your email, please, add the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the numnber of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 19 Apr 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/L05/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/L05/</guid>
+        
+        <category>data</category>
+        
+        <category>collecting</category>
+        
+        <category>organizing</category>
+        
+        <category>creating</category>
+        
+        <category>OCR</category>
+        
+        
+        <category>lessons</category>
+        
+      </item>
     
       <item>
         <title>L06 Data II: Modeling &amp; Manipulating</title>
@@ -196,292 +675,6 @@
         <category>abstractions</category>
         
         <category>featureas</category>
-        
-        
-        <category>lessons</category>
-        
-      </item>
-    
-      <item>
-        <title>L05 Data I: Collecting, Organizing, Creating</title>
-        <description>&lt;h1 id=&quot;goals&quot;&gt;Goals:&lt;/h1&gt;
-
-&lt;p&gt;Getting to know the basics of working with data: collecting, creating, organizing.&lt;/p&gt;
-
-&lt;h1 id=&quot;software--other-required-materials&quot;&gt;Software &amp;amp; Other Required Materials&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;R&lt;/li&gt;
-  &lt;li&gt;OCR Engines (&lt;a href=&quot;https://www.onlineocr.net/&quot;&gt;https://www.onlineocr.net/&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;Excel, Google Spreadsheets, or any other alternative&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;in-class-i-theoretical-and-conceptual&quot;&gt;In Class I: &lt;em&gt;Theoretical and Conceptual&lt;/em&gt;&lt;/h1&gt;
-
-&lt;h2 id=&quot;ways-of-obtaining-data&quot;&gt;Ways of obtaining data&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Reusing already produced data
-    &lt;ul&gt;
-      &lt;li&gt;One may require to mold data into a more fitting structure.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Creating one’s own dataset&lt;/li&gt;
-  &lt;li&gt;Digitizing data from printed and/or hand-written sources&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;main-format&quot;&gt;Main format&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Relational databases or Tables/Spreadsheets (&lt;em&gt;tabular data&lt;/em&gt;)?
-    &lt;ul&gt;
-      &lt;li&gt;Tabular format: tables; spreadsheets; CSV/TSV files.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Unique identifiers&lt;/em&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;tables with different data can be connected via &lt;em&gt;unique identifiers&lt;/em&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Note:&lt;/strong&gt; A relational database (rDB) is a collection of interconnected tables. Tables in an rDB are connected with each other via &lt;em&gt;unique identifiers&lt;/em&gt; which are usually automatically created by the database itself when new data is added.&lt;/li&gt;
-      &lt;li&gt;One can maintain interconnected tables without creating a rDB: &lt;em&gt;Open Linked Data&lt;/em&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;Example&lt;/strong&gt;: Table of the growth of cities. One table includes information on population over time; Another table includes coordinates of the cities from the dataset. It is more efficient and practical (reducing error rate from typos) to work on these tables separately, and connect them via unique identifiers of cities which are used in both tables.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;note-on-the-csvtsv-format&quot;&gt;Note on the &lt;code class=&quot;highlighter-rouge&quot;&gt;CSV&lt;/code&gt;/&lt;code class=&quot;highlighter-rouge&quot;&gt;TSV&lt;/code&gt; format&lt;/h3&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CSV&lt;/code&gt; stands for &lt;em&gt;comma-separated values&lt;/em&gt;; &lt;code class=&quot;highlighter-rouge&quot;&gt;TSV&lt;/code&gt; — for &lt;em&gt;tab-separated values&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Below is an examples of a CSV format. Here, the first line is the &lt;em&gt;header&lt;/em&gt;, which provides the names of columns; each line is a row, while columns are separated with &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; commas.&lt;/p&gt;
-
-&lt;div class=&quot;language-cs highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;city&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;growth_from_2000_to_2013&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;latitude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;longitude&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;population&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;state&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;New&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;York&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;40.7127837&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;74.0059413&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8405837&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;New&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;York&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Los&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Angeles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4.8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;34.0522342&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;118.2436849&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3884307&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;California&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Chicago&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;6.1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;41.8781136&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;87.6297982&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2718782&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Illinois&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Houston&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;11.0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;29.7604267&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;95.3698028&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2195914&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Texas&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;Philadelphia&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2.6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;39.9525839&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,-&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;75.1652215&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1553165&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Pennsylvania&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;TSV&lt;/code&gt; is a better option than a &lt;code class=&quot;highlighter-rouge&quot;&gt;CSV&lt;/code&gt;, since TAB characters (&lt;code class=&quot;highlighter-rouge&quot;&gt;\t&lt;/code&gt;) are very unlikely to appear in values.&lt;/p&gt;
-
-&lt;p&gt;Neither &lt;code class=&quot;highlighter-rouge&quot;&gt;TSV&lt;/code&gt; not &lt;code class=&quot;highlighter-rouge&quot;&gt;CSV&lt;/code&gt; are good for preserving &lt;em&gt;new line characters&lt;/em&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;\n&lt;/code&gt;)—or, in other words, text split into multiple lines/paragraphs. As a workaround, one can convert &lt;code class=&quot;highlighter-rouge&quot;&gt;\n&lt;/code&gt; into some unlikely-to-occur character combination (for example, &lt;code class=&quot;highlighter-rouge&quot;&gt;;;;&lt;/code&gt;), which would be easy to restore into &lt;code class=&quot;highlighter-rouge&quot;&gt;\n&lt;/code&gt; later, if necessary.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-principles-of-organizing-data-tidy-data&quot;&gt;Basic principles of organizing data: &lt;em&gt;Tidy Data&lt;/em&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;tidy-data&quot;&gt;Tidy Data&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Each variable is in its own column&lt;/li&gt;
-  &lt;li&gt;Each observation is in its own row&lt;/li&gt;
-  &lt;li&gt;Each value is in its own cell&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;clean-data&quot;&gt;Clean Data&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Column names and row names are easy to use and informative. In general, it is a good practice to avoid &lt;code class=&quot;highlighter-rouge&quot;&gt;spaces&lt;/code&gt; and special characters.
-    &lt;ul&gt;
-      &lt;li&gt;Good example: &lt;code class=&quot;highlighter-rouge&quot;&gt;western_cities&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Alternative good example: &lt;code class=&quot;highlighter-rouge&quot;&gt;WesternCities&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Bad example: &lt;code class=&quot;highlighter-rouge&quot;&gt;Western Cities (only the largest)&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Obvious mistakes in the data have been removed
-    &lt;ul&gt;
-      &lt;li&gt;Date format: &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD&lt;/code&gt; is the most reliable format. Any thoughts why?&lt;/li&gt;
-      &lt;li&gt;There should be no empty &lt;code class=&quot;highlighter-rouge&quot;&gt;cells&lt;/code&gt;:
-        &lt;ul&gt;
-          &lt;li&gt;If you have them, it might be that your data is not organized properly.&lt;/li&gt;
-          &lt;li&gt;If your data is organized properly, &lt;code class=&quot;highlighter-rouge&quot;&gt;NA&lt;/code&gt; must be used as an explicit indication that data point is not available.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Each cell must contain only one piece of data.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Variable values must be internally consistent
-    &lt;ul&gt;
-      &lt;li&gt;Be consistent in coding your values: &lt;code class=&quot;highlighter-rouge&quot;&gt;M&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;man&lt;/code&gt; are different values computationally, but may be the same in the dataset;&lt;/li&gt;
-      &lt;li&gt;Keep track of your categories: a document where all codes used in the data set are explained.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Preserve original values
-    &lt;ul&gt;
-      &lt;li&gt;If you are working with a historical dataset, it might be inconsistent.
-        &lt;ul&gt;
-          &lt;li&gt;For example, distances between cities are given in different formats: days of travel, miles, &lt;em&gt;farsaḫ&lt;/em&gt;s/parasangs, etc.).&lt;/li&gt;
-          &lt;li&gt;Instead of replacing original values, it is better to create an additional column, where this information will be homogenized according to some principle.&lt;/li&gt;
-          &lt;li&gt;Keeping original data will allow to honogenize data in multiple ways (example: &lt;em&gt;day of travel&lt;/em&gt;).&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Clearly differentiate between the &lt;em&gt;original&lt;/em&gt; and &lt;em&gt;modified/modelled&lt;/em&gt; values.
-        &lt;ul&gt;
-          &lt;li&gt;The use of suffixes can be convenient: &lt;code class=&quot;highlighter-rouge&quot;&gt;Distance_Orig&lt;/code&gt; &lt;em&gt;vs&lt;/em&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;Distance_Modified&lt;/code&gt;.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Most of editing operations should be performed in software other than R; any spreadsheet program will work, unless it cannot export into CSV/TSV format.
-    &lt;ul&gt;
-      &lt;li&gt;Keep in mind that if you prepare your data in an Excel-like program, rich formatting (like manual highlights, bolds, and italics) is not &lt;em&gt;data&lt;/em&gt; and it will be lost, when you export your data into CSV/TSV format.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Note:&lt;/strong&gt; It might be useful, however, to use rule-based highlighting in order, for example, to identify bad values that need to be fixed.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Back up your data!
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://github.com&quot;&gt;http://github.com&lt;/a&gt; is a great place for this, plus it allows to work collaboratively.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Google spreadsheets&lt;/strong&gt; is a decent alternative, but it lacks version control and detailed tracking of changes.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--
-EXTRA NOTES
-
-https://lsru.github.io/tv_course/lecture05_tidyr.html#1
-
-https://arxiv.org/abs/1809.02264
-
-https://cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html
-http://vita.had.co.nz/papers/tidy-data.html // https://vita.had.co.nz/papers/tidy-data.pdf
-
-Jeff Leek in his book The Elements of Data Analytic Style (Jeff Leek, The Elements of Data Analytic Style, Leanpub, 2015-03-02) summarizes the characteristics of tidy data as the points:[3]
-
-Each variable you measure should be in one column.
-Each different observation of that variable should be in a different row.
-There should be one table for each &quot;kind&quot; of variable.
-If you have multiple tables, they should include a column in the table that allows them to be linked.
---&gt;
-
-&lt;h1 id=&quot;in-class-ii-practical&quot;&gt;In Class II: &lt;em&gt;Practical&lt;/em&gt;&lt;/h1&gt;
-
-&lt;!--
-## Bulliet Dataset
-
-|![Sample_Page_With_Tabular_Data](./img/03/Sample_Page_With_Tabular_Data.png)|
-|:-:|
-|The data set shows chrono-geographical distribution of Islamic scholars, according to one of the medieval biographical sources. Source: Bulliet, Richard W. 2009. *Cotton, Climate, and Camels in Early Islamic Iran: A Moment in World History*. New York: Columbia University Press.|
-
-* Digitize a small data set from this [Sample_Page_With_Tabular_Data.zip](../files/03/Sample_Page_With_Tabular_Data.zip).
-* Fix the dataset so that it confirms to the principles of **tidy data**. What should be corrected?
-* Load the data set into R
-* Data for regions is given in relative values. Calculate absolute values. Graph chronological distribution of Islamic scholars from each region both in absolute and relative values.
---&gt;
-
-&lt;h2 id=&quot;morris-dataset-the-east-vs-the-west&quot;&gt;Morris Dataset: &lt;em&gt;the East Vs. the West&lt;/em&gt;&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;&lt;img src=&quot;../../files/Sample_Page_With_Tabular_Data_Morris.png&quot; alt=&quot;Sample_Page_With_Tabular_Data_Morris.png&quot; /&gt;&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;&lt;em&gt;War-making capacity since 4000 BCE (in social development points).&lt;/em&gt; &lt;strong&gt;Data source&lt;/strong&gt;: Morris, Ian. 2013. &lt;em&gt;The Measure of Civilization: How Social Development Decides the Fate of Nations&lt;/em&gt;. Princeton: Princeton University Press.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;difficulty-easy&quot;&gt;Difficulty: Easy&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Digitize “War-making capacity since 4000 BCE” from this file &lt;a href=&quot;../../files/Morris_2013_Combined.pdf&quot;&gt;Morris_2013_Combined.pdf&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Fix the dataset so that it confirms to the principles of &lt;strong&gt;tidy data&lt;/strong&gt;. What should be corrected?&lt;/li&gt;
-  &lt;li&gt;Load the data set into R&lt;/li&gt;
-  &lt;li&gt;Graph chronological changes in war-making capacities for the East and the West.&lt;/li&gt;
-  &lt;li&gt;When the East was in the lead?&lt;/li&gt;
-  &lt;li&gt;When the West was in the lead?&lt;/li&gt;
-  &lt;li&gt;How can you determine that? (&lt;em&gt;Hint&lt;/em&gt;: review logical operators and vector comparison).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;difficulty-more-complicated&quot;&gt;Difficulty: More complicated&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Digitize “Maximum Settlement Sizes” from this file &lt;a href=&quot;../../files/Morris_2013_Combined.pdf&quot;&gt;Morris_2013_Combined.pdf&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Fix the dataset so that it confirms to the principles of &lt;strong&gt;tidy data&lt;/strong&gt;. What should be corrected?&lt;/li&gt;
-  &lt;li&gt;The datasets for the East and the West are separate. What would be your strategies to combine them?&lt;/li&gt;
-  &lt;li&gt;Graph chronological changes in war-making capacities for the East and the West.&lt;/li&gt;
-  &lt;li&gt;When the East was in the lead? What were the most prominent settlements?&lt;/li&gt;
-  &lt;li&gt;When the West was in the lead? What were the most prominent settlements?&lt;/li&gt;
-  &lt;li&gt;How can you determine that? (&lt;em&gt;Hint&lt;/em&gt;: review logical operators and vector comparison).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--
-
-Morris_2013_Combined_Raster.pdf
-
-Morris 2013 - The measure of civilization - War Making Capacity - Both.pdf
-Morris 2013 - The measure of civilization - Energy Capture - East.pdf
-Morris 2013 - The measure of civilization - Energy Capture - West.pdf
-Morris 2013 - The measure of civilization - Information Technology Scores - Both.pdf
-Morris 2013 - The measure of civilization - Maximum Settlement Sizes - East.pdf
-Morris 2013 - The measure of civilization - Maximum Settlement Sizes - West.pdf
-Morris 2013 - The measure of civilization - Social Development Score - East.pdf
-Morris 2013 - The measure of civilization - Social Development Score - West.pdf
---&gt;
-
-&lt;h1 id=&quot;reference-materials&quot;&gt;Reference Materials:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Wickham, Hadley. 2014. “Tidy Data.” &lt;em&gt;Journal of Statistical Software 59 (10)&lt;/em&gt;. &lt;a href=&quot;https://doi.org/10.18637/jss.v059.i10&quot;&gt;https://doi.org/10.18637/jss.v059.i10&lt;/a&gt;. (The article in open access)
-    &lt;ul&gt;
-      &lt;li&gt;Check these slides: A. Ginolhac, E. Koncina, R. Krause. &lt;em&gt;Principles of Tidy Data: tidyr&lt;/em&gt; &lt;a href=&quot;https://lsru.github.io/tv_course/lecture05_tidyr.html&quot;&gt;https://lsru.github.io/tv_course/lecture05_tidyr.html&lt;/a&gt; (Also check their other lectures/slides: )&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Broman, Karl W., and Kara H. Woo. 2018. “Data Organization in Spreadsheets.” &lt;em&gt;The American Statistician&lt;/em&gt; 72 (1): 2–10. &lt;a href=&quot;https://doi.org/10.1080/00031305.2017.1375989&quot;&gt;https://doi.org/10.1080/00031305.2017.1375989&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;additional&quot;&gt;Additional&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Morris, Ian. 2013. &lt;em&gt;The Measure of Civilization: How Social Development Decides the Fate of Nations&lt;/em&gt;. Princeton: Princeton University Press.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Note:&lt;/strong&gt; This book is a methodological companion to: Morris, Ian. 2010. &lt;em&gt;Why the West Rules—for Now: The Patterns of History, and What They Reveal about the Future.&lt;/em&gt; New York: Farrar, Straus and Giroux.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;additional-readings&quot;&gt;Additional Readings&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Wickham, Hadley. 2014. “Tidy Data.” &lt;em&gt;Journal of Statistical Software 59 (10)&lt;/em&gt;. &lt;a href=&quot;https://doi.org/10.18637/jss.v059.i10&quot;&gt;https://doi.org/10.18637/jss.v059.i10&lt;/a&gt;. (The article in open access)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Finish the assignment started in class; email report (ideally, as a PDF, since now it will include graphs).&lt;/li&gt;
-  &lt;li&gt;Find your own small data set published in a book or an article; digitize it using strategies discussed in class; run some analytical tasks (anything from what you have learned so far); create a report.&lt;/li&gt;
-  &lt;li&gt;Email both reports.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Homework assignment must be submitted by the beginning of the next class;&lt;/li&gt;
-  &lt;li&gt;Email your homework to the instructor as attachments.
-    &lt;ul&gt;
-      &lt;li&gt;In the subject of your email, please, add the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the numnber of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 18 Apr 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/L05/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/L05/</guid>
-        
-        <category>data</category>
-        
-        <category>collecting</category>
-        
-        <category>organizing</category>
-        
-        <category>creating</category>
-        
-        <category>OCR</category>
         
         
         <category>lessons</category>
