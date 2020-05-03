@@ -5,9 +5,84 @@
     <description>070184 UE Methodenkurs - DH Methods: Historical Inquiries with R (2020S)&lt;br&gt;Instructor Dr. Maxim G. Romanov&lt;br&gt;Department of History&lt;br&gt;—University of Vienna—</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 26 Apr 2020 18:06:37 +0200</pubDate>
-    <lastBuildDate>Sun, 26 Apr 2020 18:06:37 +0200</lastBuildDate>
+    <pubDate>Sun, 03 May 2020 22:13:22 +0200</pubDate>
+    <lastBuildDate>Sun, 03 May 2020 22:13:22 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>L07 Text Analysis I: Chasing Words</title>
+        <description>&lt;h1 id=&quot;goals&quot;&gt;Goals:&lt;/h1&gt;
+
+&lt;p&gt;Easing into text analysis…&lt;/p&gt;
+
+&lt;h1 id=&quot;software&quot;&gt;Software:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;R&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;in-class&quot;&gt;In Class&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Let’s work with this workbook: &lt;a href=&quot;../../files/L07_Worksheet_TextAnalysis01.Rmd.zip&quot;&gt;L07_Worksheet_TextAnalysis01.Rmd.zip&lt;/a&gt;. (For your reference, a knitted workbook can also be found &lt;a href=&quot;../../L07_Worksheet.html&quot;&gt;here&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Data:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://univie-histr-2020s.github.io/files/dispatch_1861.tsv&quot;&gt;https://univie-histr-2020s.github.io/files/dispatch_1861.tsv&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://univie-histr-2020s.github.io/files/dispatch_1862.tsv&quot;&gt;https://univie-histr-2020s.github.io/files/dispatch_1862.tsv&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://univie-histr-2020s.github.io/files/sw1.md&quot;&gt;https://univie-histr-2020s.github.io/files/sw1.md&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference-materials&quot;&gt;Reference Materials&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;given in the workbook&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;given in the workbook&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Homework assignment must be submitted by the beginning of the next class;&lt;/li&gt;
+  &lt;li&gt;Email your homework to the instructor as attachments.
+    &lt;ul&gt;
+      &lt;li&gt;In the subject of your email, please, add the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the numnber of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 03 May 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/L07/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/L07/</guid>
+        
+        <category>text analysis</category>
+        
+        <category>tokenization</category>
+        
+        <category>stemming</category>
+        
+        <category>lemmatization</category>
+        
+        <category>word frequencies</category>
+        
+        <category>word clouds</category>
+        
+        <category>word distribution plots</category>
+        
+        <category>Key-Words-in-Context</category>
+        
+        <category>KWIC</category>
+        
+        
+        <category>lessons</category>
+        
+      </item>
     
       <item>
         <title>L06 Data II: Modeling &amp; Manipulating</title>
