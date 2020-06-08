@@ -5,9 +5,328 @@
     <description>070184 UE Methodenkurs - DH Methods: Historical Inquiries with R (2020S)&lt;br&gt;Instructor Dr. Maxim G. Romanov&lt;br&gt;Department of History&lt;br&gt;—University of Vienna—</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 03 May 2020 22:13:22 +0200</pubDate>
-    <lastBuildDate>Sun, 03 May 2020 22:13:22 +0200</lastBuildDate>
+    <pubDate>Mon, 08 Jun 2020 14:15:40 +0200</pubDate>
+    <lastBuildDate>Mon, 08 Jun 2020 14:15:40 +0200</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>LX Structuring Your Project</title>
+        <description>&lt;h1 id=&quot;section-i-data-description&quot;&gt;Section I: Data Description&lt;/h1&gt;
+
+&lt;p&gt;The first section of your project should include a detailed description of your data. You can use the following template for the structure of this section. Think of this part as a log of your steps and of your thinking. This is also a sort of a checklist of issues you need to keep in mind when you start a project. Feel free to add more to it — at the initial stage it is crucial to flag as many potential issues as you can possibly think of.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What is the source of your data?&lt;/li&gt;
+  &lt;li&gt;In what form (or format) is it available? Provide an example (a screenshot can be used, if that is more convenient).&lt;/li&gt;
+  &lt;li&gt;How did you obtain it? (describe the procedure)&lt;/li&gt;
+  &lt;li&gt;Did/does data require any kind of preprocessing before it becomes usable for research purposes? Specifically, do you need to convert it into a different format? If yes, how are you going to do that?&lt;/li&gt;
+  &lt;li&gt;If yes, what kind of preprocessing have you done or planning to do? And, what kind of preprocessing should be done, ideally?&lt;/li&gt;
+  &lt;li&gt;What kind of metadata is available for this dataset? Are you planning to modify it in any way? Are any modifications desirable?&lt;/li&gt;
+  &lt;li&gt;What is the structure of your dataset? If your data is tabular, you can use R functions to generate summaries. However, you should also take a closer look at your data and provide some preliminary evaluations of values in each column—pay attention to their length, formatting, inconsistencies, etc. If you data is not tabular, describe it in appropriate manner. If a unit of your dataset is a text, provide some details on their structure (especially, if structure is relevant for your research questions). Do these texts similar in some way or completely different? Why should they be studied together? Etc.&lt;/li&gt;
+  &lt;li&gt;Does you data require normalization and/or cleaning? (In most cases, it does) What kind of normalization is necessary? For example, tabular data may require changing of formatting of values; OCR output may require some postcorrection. Most likely, your data is not tidy: is it formatted to contain one observation per row? Is it formatted to contain single values per cell? What kind of procedures are necessary to normalize/tidy your data?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Think of these steps as you plan, especially when it comes to cleaning/normalizing your data. Most likely you will not be able to fix everything in your data—which is totally fine within your final project—but it is important to keep close track of this process and remain honest with yourself.&lt;/p&gt;
+
+&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Finish Section I, and submit in the usual manner.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Homework assignment must be submitted by the beginning of the next class;&lt;/li&gt;
+  &lt;li&gt;Email your homework to the instructor as attachments.
+    &lt;ul&gt;
+      &lt;li&gt;In the subject of your email, please, add the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the numnber of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 08 Jun 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/L11/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/L11/</guid>
+        
+        
+        <category>lessons</category>
+        
+      </item>
+    
+      <item>
+        <title>L10 Text Analysis IV: Working with Abstract Concepts — Sentiment Analysis, Stylometric Analysis</title>
+        <description>&lt;h1 id=&quot;goals&quot;&gt;Goals:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;introduce text analysis approaches:
+    &lt;ul&gt;
+      &lt;li&gt;semantic analysis&lt;/li&gt;
+      &lt;li&gt;stylometric analysis&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;software&quot;&gt;Software:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;R&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;in-class&quot;&gt;In Class&lt;/h1&gt;
+
+&lt;h2 id=&quot;data-richmonds-dispatch-1861-186&quot;&gt;Data: Richmond’s Dispatch (1861-186)&lt;/h2&gt;
+
+&lt;p&gt;In TSV format (&lt;em&gt;the files are the same as before&lt;/em&gt;):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/dispatch_1861_filtered.tsv&quot;&gt;Year 1981&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/dispatch_1862_filtered.tsv&quot;&gt;Year 1982&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/dispatch_1863_filtered.tsv&quot;&gt;Year 1983&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/dispatch_1864_filtered.tsv&quot;&gt;Year 1984&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Materials for stylometric tests:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/univie-histR-2020s/Worksheet_Textanalysis04_Stylometry_Light&quot;&gt;Main data and scripts: Github repository&lt;/a&gt;; &lt;a href=&quot;https://github.com/univie-histR-2020s/Worksheet_Textanalysis04_Stylometry_Light/archive/master.zip&quot;&gt;Quick Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/univie-histR-2020s/Worksheet_Textanalysis04_Stylometry_Extra&quot;&gt;Additional materials&lt;/a&gt;: corpora of English and German novels; a sample of Arabic texts for a rolling stylometry experiment.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;workbook&quot;&gt;Workbook&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Let’s work with this workbook: &lt;a href=&quot;../../files/L10_Worksheet_TextAnalysis04.Rmd.zip&quot;&gt;L10_Worksheet_TextAnalysis04.Rmd.zip&lt;/a&gt;. (For your reference, a knitted workbook can also be found &lt;a href=&quot;../../L10_Worksheet.html&quot;&gt;here&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference-materials&quot;&gt;Reference Materials&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;given in the workbook&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;given in the workbook&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Homework assignment must be submitted by the beginning of the next class;&lt;/li&gt;
+  &lt;li&gt;Email your homework to the instructor as attachments.
+    &lt;ul&gt;
+      &lt;li&gt;In the subject of your email, please, add the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the numnber of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 25 May 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/L10/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/L10/</guid>
+        
+        <category>text analysis</category>
+        
+        <category>text similarities</category>
+        
+        <category>sentiment analysis</category>
+        
+        <category>stylometric analysis</category>
+        
+        
+        <category>lessons</category>
+        
+      </item>
+    
+      <item>
+        <title>L09 Text Analysis III: Grouping Texts</title>
+        <description>&lt;h1 id=&quot;goals&quot;&gt;Goals:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;major clustering techniques: hierarchical clustering, k-means clustering, topic modeling&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;software&quot;&gt;Software:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;R&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;in-class&quot;&gt;In Class&lt;/h1&gt;
+
+&lt;h2 id=&quot;data-richmonds-dispatch-1861-186&quot;&gt;Data: Richmond’s Dispatch (1861-186)&lt;/h2&gt;
+
+&lt;p&gt;In TSV format:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/dispatch_1861_filtered.tsv&quot;&gt;Year 1981&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/dispatch_1862_filtered.tsv&quot;&gt;Year 1982&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/dispatch_1863_filtered.tsv&quot;&gt;Year 1983&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/dispatch_1864_filtered.tsv&quot;&gt;Year 1984&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Topic models:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/d1864_lda_better.rda&quot;&gt;d1864_lda_better&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/d1864_lda_vem_25t_better.rda&quot;&gt;d1864_lda_vem_25t_better&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../../files/dispatch_lda_vem_better.rda&quot;&gt;dispatch_lda_vem_better&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;workbook&quot;&gt;Workbook&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Let’s work with this workbook: &lt;a href=&quot;../../files/L09_Worksheet_TextAnalysis03.Rmd.zip&quot;&gt;L09_Worksheet_TextAnalysis02.Rmd.zip&lt;/a&gt;. (For your reference, a knitted workbook can also be found &lt;a href=&quot;../../L09_Worksheet.html&quot;&gt;here&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;topics&quot;&gt;Topics?&lt;/h1&gt;
+
+&lt;h2 id=&quot;example-1&quot;&gt;Example 1&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Thursday, March 27, 1862&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;LIGHT ARTILLERY&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;—I am authorized by the Governor of Virginia to raise a Company of Light Artillery for the war. All those desirous of enlisting in this the most effective arm of the service, would do well to call at once at the office of Johnson &amp;amp; Guigon, Whig Building.&lt;/p&gt;
+
+&lt;p&gt;Uniforms and subsistence furnished.&lt;/p&gt;
+
+&lt;p&gt;A. B. GUIGON. mh 25—6t&lt;/p&gt;
+
+&lt;h2 id=&quot;example-2&quot;&gt;Example 2&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Wednesday, August 17, 1864&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Royal Marriages.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;—There is a story circulated in Germany, and some in Paris, that the match between the heir-apparent of the Imperial throne of Russia and the Princess Dagmar of Denmark having been definitively broken off, another is in the course of negotiation between His Imperial Highness and the Princess Helens of England.&lt;/p&gt;
+
+&lt;h2 id=&quot;example-3&quot;&gt;Example 3&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Monday, June 22, 1863&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NEWS FROM EUROPE.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The steamship Scotia arrived at New York on Thursday from Europe, with foreign news to the 7th inst. The news is not important. The Confederate steamer Lord Clyde was searched by order of the British Government, but nothing contraband being found on board her she was permitted to sail. The Russians have been defeated near Grochoury by the Polish insurgents. The three Powers have sent an earnest note to Russia, asking for a representative Government, a general amnesty, and an immediate cessation of hostilities in Poland.&lt;/p&gt;
+
+&lt;h1 id=&quot;reference-materials&quot;&gt;Reference Materials&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;given in the workbook&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;given in the workbook&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Homework assignment must be submitted by the beginning of the next class;&lt;/li&gt;
+  &lt;li&gt;Email your homework to the instructor as attachments.
+    &lt;ul&gt;
+      &lt;li&gt;In the subject of your email, please, add the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the numnber of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 17 May 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/L09/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/L09/</guid>
+        
+        <category>text analysis</category>
+        
+        <category>text similarities</category>
+        
+        <category>tfidf</category>
+        
+        <category>hierarchical clustering</category>
+        
+        <category>kmeans clustering</category>
+        
+        <category>topic modeling</category>
+        
+        
+        <category>lessons</category>
+        
+      </item>
+    
+      <item>
+        <title>L08 Text Analysis II: Comparing Texts</title>
+        <description>&lt;h1 id=&quot;goals&quot;&gt;Goals:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;introduce text summarization techniques; similarity distances; keyword extraction (tf-idf)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;software&quot;&gt;Software:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;R&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;in-class&quot;&gt;In Class&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Let’s work with this workbook: &lt;a href=&quot;../../files/L08_Worksheet_TextAnalysis02.Rmd.zip&quot;&gt;L08_Worksheet_TextAnalysis02.Rmd.zip&lt;/a&gt;. (For your reference, a knitted workbook can also be found &lt;a href=&quot;../../L08_Worksheet.html&quot;&gt;here&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference-materials&quot;&gt;Reference Materials&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;given in the workbook&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;given in the workbook&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Homework assignment must be submitted by the beginning of the next class;&lt;/li&gt;
+  &lt;li&gt;Email your homework to the instructor as attachments.
+    &lt;ul&gt;
+      &lt;li&gt;In the subject of your email, please, add the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the numnber of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 10 May 2020 00:00:00 +0200</pubDate>
+        <link>http://localhost:4000/2020/L08/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020/L08/</guid>
+        
+        <category>text analysis</category>
+        
+        <category>word frequencies</category>
+        
+        <category>word clouds</category>
+        
+        <category>text distances</category>
+        
+        <category>text similarities</category>
+        
+        <category>euclidean distance</category>
+        
+        <category>jaccard index</category>
+        
+        <category>cosine similarity</category>
+        
+        <category>tfidf</category>
+        
+        <category>keywords</category>
+        
+        <category>summarization</category>
+        
+        
+        <category>lessons</category>
+        
+      </item>
     
       <item>
         <title>L07 Text Analysis I: Chasing Words</title>
@@ -910,321 +1229,6 @@ Morris 2013 - The measure of civilization - Social Development Score - West.pdf
         
         
         <category>lessons</category>
-        
-      </item>
-    
-      <item>
-        <title>L02 Basics of R: Data Structures and Subsetting</title>
-        <description>&lt;h1 id=&quot;goals&quot;&gt;Goals:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Getting to know main data structures in R&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;software&quot;&gt;Software:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;the same&lt;/em&gt;, with some new libraries:
-    &lt;ul&gt;
-      &lt;li&gt;R &lt;a href=&quot;https://www.r-project.org/&quot;&gt;https://www.r-project.org/&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;R Studio &lt;a href=&quot;https://www.rstudio.com/&quot;&gt;https://www.rstudio.com/&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;class&quot;&gt;Class:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Practice worksheet: &lt;a href=&quot;../../files/02_worksheets_data-structures.Rmd.zip&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;02_worksheets_data-structures.Rmd.zip&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;NB:&lt;/strong&gt; Original worksheets prepared by Lincoln Mullen, GMU (&lt;a href=&quot;https://dh-r.lincolnmullen.com/worksheets.html&quot;&gt;https://dh-r.lincolnmullen.com/worksheets.html&lt;/a&gt;)&lt;/p&gt;
-
-&lt;h2 id=&quot;topics-data-structures--types&quot;&gt;Topics: Data Structures &amp;amp; Types&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Data structures
-    &lt;ul&gt;
-      &lt;li&gt;Vectors&lt;/li&gt;
-      &lt;li&gt;Matrices&lt;/li&gt;
-      &lt;li&gt;Data frames&lt;/li&gt;
-      &lt;li&gt;Lists&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Subsetting operations&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;additional-notes&quot;&gt;Additional notes:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;str()&lt;/code&gt; compactly dysplays information about an R object&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;typeof()&lt;/code&gt; determines the internal type or storage mode of an R object&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;class()&lt;/code&gt; tells you the data structure of an R object:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;list&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;data.frame&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;matrix&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;vector
-        &lt;ul&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;numeric&lt;/code&gt;
-            &lt;ul&gt;
-              &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;typeof()&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;double&lt;/code&gt; — a double-precision vector (floats; default numberic vector type)&lt;/li&gt;
-              &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;typeof()&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;integer&lt;/code&gt; — a vector of integers&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;character&lt;/code&gt;
-            &lt;ul&gt;
-              &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;typeof()&lt;/code&gt; &amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;character&lt;/code&gt; — a vector of strings/characters&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Checking class/type &amp;amp; Conversion&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;create &lt;code class=&quot;highlighter-rouge&quot;&gt;test &amp;lt;- c(1,2,3,4,5)&lt;/code&gt;
-        &lt;ul&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is.___&lt;/code&gt; tests whether a variable of a &lt;code class=&quot;highlighter-rouge&quot;&gt;___&lt;/code&gt; &lt;em&gt;class&lt;/em&gt;.
-            &lt;ul&gt;
-              &lt;li&gt;or &lt;em&gt;type&lt;/em&gt;: check the &lt;code class=&quot;highlighter-rouge&quot;&gt;typeof()&lt;/code&gt; our &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt; vector; then try &lt;code class=&quot;highlighter-rouge&quot;&gt;test.ch &amp;lt;- as.character(test)&lt;/code&gt; and check the type again; can you convert it back into its initial type?).&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;is.___&lt;/code&gt; converts into a &lt;code class=&quot;highlighter-rouge&quot;&gt;___&lt;/code&gt; &lt;em&gt;class&lt;/em&gt;.&lt;/li&gt;
-          &lt;li&gt;(&lt;code class=&quot;highlighter-rouge&quot;&gt;___&lt;/code&gt; is either: &lt;code class=&quot;highlighter-rouge&quot;&gt;vector&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;matrix&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;data.frame&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;list&lt;/code&gt;)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Now try the following commands and check the type and class of the new objects:
-        &lt;ul&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test.matrix &amp;lt;- as.matrix(test)&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test.df &amp;lt;- as.data.frame(test)&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test.list &amp;lt;- as.list(test)&lt;/code&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test.vector &amp;lt;- as.vector(test.df$test)&lt;/code&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;reference-materials&quot;&gt;Reference materials:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Read two chapters from: Wickham, Hadley. &lt;em&gt;Advanced R, Second Edition.&lt;/em&gt; 2 edition. Boca Raton: Chapman and Hall/CRC, 2019. &lt;a href=&quot;http://adv-r.had.co.nz/&quot;&gt;http://adv-r.had.co.nz/&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://adv-r.had.co.nz/Data-structures.html&quot;&gt;Data structures&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://adv-r.had.co.nz/Subsetting.html&quot;&gt;Subsetting&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;For the next class, read the following article (in &lt;em&gt;open access&lt;/em&gt;, simply follow the link):
-    &lt;ul&gt;
-      &lt;li&gt;Broman, Karl W., and Kara H. Woo. 2018. “Data Organization in Spreadsheets.” &lt;em&gt;The American Statistician&lt;/em&gt; 72 (1): 2–10. &lt;a href=&quot;https://doi.org/10.1080/00031305.2017.1375989&quot;&gt;https://doi.org/10.1080/00031305.2017.1375989&lt;/a&gt;.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Additional readings&lt;/strong&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;Read &lt;em&gt;Introduction&lt;/em&gt; to Lincoln A. Mullen, &lt;em&gt;Computational Historical Thinking: With Applications in R (2018–)&lt;/em&gt;: (&lt;a href=&quot;http://dh-r.lincolnmullen.com/introduction.html&quot;&gt;http://dh-r.lincolnmullen.com/introduction.html&lt;/a&gt;)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Finish your worksheet and submit your HW as described below.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Homework assignment must be submitted by the beginning of the next class;&lt;/li&gt;
-  &lt;li&gt;Email your homework to the instructor as attachments.
-    &lt;ul&gt;
-      &lt;li&gt;In the subject of your email, please, add the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the numnber of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 15 Mar 2020 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/2020/L02/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/L02/</guid>
-        
-        <category>basics</category>
-        
-        <category>data structures</category>
-        
-        
-        <category>lessons</category>
-        
-      </item>
-    
-      <item>
-        <title>L01 General Introduction: Making Sure Everything Works</title>
-        <description>&lt;h1 id=&quot;goals&quot;&gt;Goals:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Install R and R Studio and start working with them
-    &lt;ul&gt;
-      &lt;li&gt;R &lt;a href=&quot;https://www.r-project.org/&quot;&gt;https://www.r-project.org/&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;R Studio &lt;a href=&quot;https://www.rstudio.com/&quot;&gt;https://www.rstudio.com/&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Get to know R Notebooks (R markdown)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;software&quot;&gt;Software:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;R &lt;a href=&quot;https://www.r-project.org/&quot;&gt;https://www.r-project.org/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;R Studio &lt;a href=&quot;https://www.rstudio.com/&quot;&gt;https://www.rstudio.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;class&quot;&gt;Class:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;R Studio Interface&lt;/li&gt;
-  &lt;li&gt;Installing libraries (packages)&lt;/li&gt;
-  &lt;li&gt;R Notebook elements: combining prose and code&lt;/li&gt;
-  &lt;li&gt;Converting R Notebook into different formats&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;installing-rmarkdown&quot;&gt;Installing &lt;code class=&quot;highlighter-rouge&quot;&gt;rmarkdown&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Instructions here: &lt;a href=&quot;https://bookdown.org/yihui/rmarkdown/installation.html&quot;&gt;https://bookdown.org/yihui/rmarkdown/installation.html&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;More information on R Markdown:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://rmarkdown.rstudio.com/lesson-1.html&quot;&gt;https://rmarkdown.rstudio.com/lesson-1.html&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bookdown.org/yihui/rmarkdown/&quot;&gt;https://bookdown.org/yihui/rmarkdown/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!--
-### YAML header
-
-``` r
----
-title: &quot;R Notebook Test&quot;
-output:
-  html_document:
-    df_print: paged
-    toc: true
----
-```
---&gt;
-
-&lt;h2 id=&quot;starting-with-our-first-workbook&quot;&gt;Starting with our first workbook:&lt;/h2&gt;
-
-&lt;p&gt;Now, download a worksheet file (&lt;a href=&quot;../../files/01_worksheets_familiar-with-r.Rmd.zip&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;01_worksheets_familiar-with-r.Rmd.zip&lt;/code&gt;&lt;/a&gt;). Unzip it and open in &lt;code class=&quot;highlighter-rouge&quot;&gt;RStudio&lt;/code&gt;. Let’s work through it!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;NB:&lt;/strong&gt; Original worksheets prepared by Lincoln Mullen, GMU (&lt;a href=&quot;https://dh-r.lincolnmullen.com/worksheets.html&quot;&gt;https://dh-r.lincolnmullen.com/worksheets.html&lt;/a&gt;)&lt;/p&gt;
-
-&lt;h2 id=&quot;topics-covered&quot;&gt;Topics covered:&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Values&lt;/li&gt;
-  &lt;li&gt;Variables&lt;/li&gt;
-  &lt;li&gt;Vectors&lt;/li&gt;
-  &lt;li&gt;Built-in functions&lt;/li&gt;
-  &lt;li&gt;Using the documentation&lt;/li&gt;
-  &lt;li&gt;Data frames&lt;/li&gt;
-  &lt;li&gt;Installing and loading packages&lt;/li&gt;
-  &lt;li&gt;Simple plots&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;reference-materials&quot;&gt;Reference materials:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;R Primer&lt;/em&gt; (&lt;a href=&quot;https://dh-r.lincolnmullen.com/primer.html&quot;&gt;https://dh-r.lincolnmullen.com/primer.html&lt;/a&gt;) in: Lincoln A. Mullen, &lt;em&gt;Computational Historical Thinking: With Applications in R (2018–):&lt;/em&gt; &lt;a href=&quot;https://dh-r.lincolnmullen.com&quot;&gt;https://dh-r.lincolnmullen.com&lt;/a&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;Use the this primer as a quick introduction to the &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; language, or as a reference for the rest of the course.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The original worksheets have been developed by Lincoln Mullen (&lt;a href=&quot;https://dh-r.lincolnmullen.com/worksheets.html&quot;&gt;https://dh-r.lincolnmullen.com/worksheets.html&lt;/a&gt;). The ones used in this class might have undergone some changes and relevant adaptations.&lt;/li&gt;
-  &lt;li&gt;Your &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; installation may ‘speak’ your main language. It is nice on one hand, but can be quite inconvenient in class, where the main language is English. You may have to do cast some spells to switch &lt;code class=&quot;highlighter-rouge&quot;&gt;R&lt;/code&gt; into English. Possible solutions can be found here: &lt;a href=&quot;https://stackoverflow.com/questions/13575180/how-to-change-language-settings-in-r/&quot;&gt;https://stackoverflow.com/questions/13575180/how-to-change-language-settings-in-r/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;homework&quot;&gt;Homework:&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Complete the worksheet &lt;em&gt;Getting familiar with R&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;Generate the results into HTML or PDF (PDF is a little bit trickier).&lt;/li&gt;
-  &lt;li&gt;Submit your homework as described below.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;common-issues-with-homework&quot;&gt;Common issues with homework:&lt;/h1&gt;
-
-&lt;h2 id=&quot;tracing-errors&quot;&gt;Tracing errors&lt;/h2&gt;
-
-&lt;p&gt;Errors happen all the time. You will run into errors when you run your code. You will run into error messages when “knitting” your document — as a result, your document will not be generated. To resolve this:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;It is important to run each chunk of code separately to ensure that they all work. If any of the chunks throw errors, you will not be able to “knit” your documents.&lt;/li&gt;
-  &lt;li&gt;When you run into an error, &lt;code class=&quot;highlighter-rouge&quot;&gt;R Markdown&lt;/code&gt; panel (usually in the lower left corner of RStudio interface) will tell you in which line the error occurred. You will need to fix it the same way you would in Step 1.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;comments--commenting-out&quot;&gt;Comments / Commenting out&lt;/h2&gt;
-
-&lt;p&gt;You do not want to constantly keep [re]installing libraries. So, if a library is already installed, you can “comment out” that line.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-{r}&quot;&gt;install.packages(&quot;historydata&quot;)
-install.packages(&quot;dplyr&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;For example, the code chunk above should become:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-{r}&quot;&gt;#install.packages(&quot;historydata&quot;)
-#install.packages(&quot;dplyr&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Adding &lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt; in front of a line (or a section of a line) turns it into a &lt;code class=&quot;highlighter-rouge&quot;&gt;comment&lt;/code&gt; and it will not longer be executed.&lt;/p&gt;
-
-&lt;h2 id=&quot;random-errors&quot;&gt;Random errors:&lt;/h2&gt;
-
-&lt;p&gt;Think about the following two lines of code. Any issues that you can explain? (You might want to run these lines in R to get some clues)&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;`?median`&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;variable1 &amp;lt;- DigitalHumanities&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;submitting-homework&quot;&gt;Submitting homework:&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Homework assignment must be submitted by the beginning of the next class;&lt;/li&gt;
-  &lt;li&gt;Email your homework to the instructor as attachments.
-    &lt;ul&gt;
-      &lt;li&gt;In the subject of your email, please, add the following: &lt;code class=&quot;highlighter-rouge&quot;&gt;070184-LXX-HW-YourLastName-YourMatriculationNumber&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;LXX&lt;/code&gt; is the numnber of the lesson for which you submit homework; &lt;code class=&quot;highlighter-rouge&quot;&gt;YourLastName&lt;/code&gt; is your last name; and &lt;code class=&quot;highlighter-rouge&quot;&gt;YourMatriculationNumber&lt;/code&gt; is your matriculation number.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sun, 08 Mar 2020 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/2020/L01/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/L01/</guid>
-        
-        <category>intro</category>
-        
-        <category>r</category>
-        
-        <category>rstudio</category>
-        
-        
-        <category>lessons</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to the Course Website!</title>
-        <description>&lt;p&gt;This is a companion website for the course “070184 UE Methodenkurs - DH Methods: Historical Inquiries with R (2020S)”, offered at the University of Vienna (Department of History) and taught by Dr. Maxim G. Romanov. For the course syllabus, check the Syllabus link on the left panel. Lesson materials will be appearing on the website shortly before each class.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 07 Mar 2020 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/2020/welcome/</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/welcome/</guid>
-        
-        <category>intro</category>
-        
-        
-        <category>intro</category>
         
       </item>
     
